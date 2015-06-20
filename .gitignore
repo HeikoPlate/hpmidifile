@@ -26,3 +26,13 @@
 *.exe
 *.out
 *.app
+*.bsc
+*.pdb
+*.sbr
+*.ilk
+*.ncb
+*.opt
+*.plg
+*.tmp
+*.log
+HP_MIDI_TEST/HP_MIDI_TEST.APS

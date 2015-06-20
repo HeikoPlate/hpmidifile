@@ -1,0 +1,212 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 7, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\HP_MIDI_TEST.rc2""  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen\r\n"
+    "#include ""l.deu\\afxres.rc""          // Standardkomponenten\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\HP_MIDI_TEST.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HP_MIDI_TEST_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "HP_MIDI_TEST"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDOK,263,179,50,14
+    PUSHBUTTON      "Run",IDC_RUN,202,179,50,14
+    PUSHBUTTON      "Source",IDC_SELECTSOURCE,47,7,50,14
+    PUSHBUTTON      "Play",IDC_Play,7,179,50,14
+    PUSHBUTTON      "Pause",IDC_Pause,67,179,50,14
+    PUSHBUTTON      "Stop",IDC_STOP,127,179,50,14
+    LTEXT           "Takt:Beat",IDC_TAKT_BEAT_TEXT,7,160,32,8
+    EDITTEXT        IDC_TAKT_BEAT,47,158,93,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Chord",IDC_CHORD_TEXT,7,140,20,8
+    EDITTEXT        IDC_CHORD,47,139,93,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Lyric",IDC_LYRIC_TEXT,7,123,16,8
+    EDITTEXT        IDC_LYRIC,47,122,93,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Change Play Tempo",IDC_TEMPO_TEXT,7,32,65,8
+    PUSHBUTTON      "-",IDC_HALF_TEMPO,121,32,10,9
+    PUSHBUTTON      "0",IDC_ORIGINAL_TEMPO,82,32,13,9
+    PUSHBUTTON      "+",IDC_DOUBLE_TEMPO,104,32,9,9
+    PUSHBUTTON      "Save",IDC_SAVE,139,7,50,15
+    EDITTEXT        IDC_START_TIME,225,32,25,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "new start time",IDC_START_TIME_TEXT,175,34,45,10
+    PUSHBUTTON      "Accept time",IDC_SET_TIME,255,32,50,13
+    PUSHBUTTON      "Send ",IDC_SINGLE_EVENT_SEND,134,94,47,14
+    GROUPBOX        "Single Event",IDC_SINGLE_EVENT_FRAME,7,47,306,64
+    LTEXT           "Master Volume",IDC_MASTER_VOLUME_TEXT,57,55,50,8
+    CONTROL         "",IDC_MASTER_VOLUME_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,110,55,10,10
+    LTEXT           "Parameter",IDC_PARAMETER_TEXT,120,75,33,8
+    EDITTEXT        IDC_PARAMETER,165,73,18,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Contrl. 7, Chan 1",IDC_CTRL7_CHAN1,175,55,58,8
+    CONTROL         "",IDC_CTRL7_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    235,54,11,8
+    PUSHBUTTON      "Close",IDC_CLOSE,229,7,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,9
+ PRODUCTVERSION 1,0,0,9
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MFC-Anwendung HP_MIDI_TEST\0"
+            VALUE "FileVersion", "1, 0, 0, 9\0"
+            VALUE "InternalName", "HP_MIDI_TEST\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "HP_MIDI_TEST.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Anwendung HP_MIDI_TEST\0"
+            VALUE "ProductVersion", "1, 0, 0, 9\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x407, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_HP_MIDI_TEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        VERTGUIDE, 47
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\HP_MIDI_TEST.rc2"  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen
+#include "l.deu\afxres.rc"          // Standardkomponenten
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,23 @@
+# Microsoft Developer Studio erstellte Abhängigkeitsdatei, einbezogen von HP_MIDI_TEST.mak
+
+.\HP_MIDI_TEST.cpp : \
+	"..\HP_MIDIFILE_DLL\HP_midifile.h"\
+	".\HP_MIDI_TEST.h"\
+	".\HP_MIDI_TESTDlg.h"\
+	
+
+.\HP_MIDI_TEST.rc : \
+	".\res\HP_MIDI_TEST.ico"\
+	".\res\HP_MIDI_TEST.rc2"\
+	
+
+.\HP_MIDI_TESTDlg.cpp : \
+	"..\HP_MIDIFILE_DLL\HP_midifile.h"\
+	".\HP_MIDI_TEST.h"\
+	".\HP_MIDI_TESTDlg.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"c:\dxsdk\include\basetsd.h"\
+	
