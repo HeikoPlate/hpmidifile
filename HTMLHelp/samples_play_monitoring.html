@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Play Monitoring: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_init_play_monitor.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_cwins.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Play Monitoring: Samples</font></b>
+</p>
+
+The user has to insert the declaration of an own play-monitor-class in the header-file of his program.
+<BR>
+<BR>
+<pre>
+class MY_PLAY_MONITOR : public HP_PLAY_MONITOR
+{
+public:
+   void HP_PlayTBMonitor(int takt, int beat);
+   void HP_PlayChMonitor(char* chord_text);
+   void HP_PlayLyMonitor(char* lyric_text);
+
+   HWND whandle; // needed to display of takt, beat, chord and lyric
+};
+</pre>
+<BR>
+<BR>
+The definitions of the user-member-funktions:
+<BR>
+<BR>
+<pre>
+void MY_PLAY_MONITOR::HP_PlayTBMonitor(int takt, int beat)
+{
+   if (takt==-1)
+   {
+      SetDlgItemText(whandle,IDC_TAKT_BEAT,"");
+      return;
+   }
+
+   CString r;
+   r.Format("%4.4i:%2.2i",takt+1,beat+1);
+   SetDlgItemText(whandle,IDC_TAKT_BEAT,r);
+}
+
+void MY_PLAY_MONITOR::HP_PlayChMonitor(char* chord_text)
+{
+   SetDlgItemText(whandle,IDC_CHORD,chord_text);
+   HP_Delete(chord_text); // always needed !
+}
+
+void MY_PLAY_MONITOR::HP_PlayLyMonitor(char* lyric_text)
+{
+   SetDlgItemText(whandle,IDC_LYRIC,lyric_text);
+   HP_Delete(lyric_text); // always needed !
+}
+</pre>
+<BR>
+<BR>
+The runtime statements:
+<BR>
+<BR>
+<pre>
+// create instance of MY_PLAY_MONITOR
+MY_PLAY_MONITOR *pm= new MY_PLAY_MONITOR;
+
+// send the handle of the actual Window to the instance of MY_PLAY_MONITOR
+pm->whandle = this->m_hWnd;
+
+// initialize the monitor
+HP_InitPlayMonitor(mf,pm);
+.
+.
+.
+.
+// After this, a play can be started:
+
+result = HP_Play(mf,HP_ALL);
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+.
+.
+.
+.
+// later
+
+delete pm;
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

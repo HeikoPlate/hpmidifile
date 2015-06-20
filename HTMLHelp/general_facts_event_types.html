@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Event Types: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="event_types.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Event Types: General Facts</font></b>
+</p>
+<br>
+<br>
+
+<p><font face="Verdana" size="2">
+
+
+The MIDI-events are organisized in HP MIDIFILE with a tag, which describes the event types. The types are
+"unsigned int" (UINT) constants and in many functions these are used with the parameter "type".
+<br>
+<br>
+The table of event-types in <A HREF="event_types.html">Types</A> is divided in three columns:
+The name of the UINT type, the category, and the meaning.
+<br>
+<br>
+<br>
+<b>The categories</b>
+<br>
+<br>
+<TABLE>
+<TR VALIGN=top><TD><I>Standard</I></TD>
+    <TD>Standard MIDI-events, status from 0x8? to 0xe?, without controller-events but with NRPN and RPN<br></TD>
+<TR VALIGN=top><TD><I>Controller</I></TD>
+    <TD>Standard Controller-events, status 0xb?, but without NRPN and RPN<br></TD>
+<TR VALIGN=top><TD><I>SysEx</I></TD>
+    <TD>Systeme Exclusive events, status 0xf0<br></TD>
+<TR VALIGN=top><TD><I>Standard Meta</I></TD>
+    <TD>Standard Meta-events, from 0xff-0x00 to 0xff-0x59<br></TD>
+<TR VALIGN=top><TD><I>YAMAHA Meta</I></TD>
+    <TD>Meta-events, beginning 0xff-0x7f-0x43<br></TD>
+<TR VALIGN=top><TD><I>Event</I></TD>
+    <TD>User defined event<br></TD>
+<TR VALIGN=top><TD><I>Meta</I></TD>
+    <TD>Unknown Meta-event<br></TD>
+</Table>
+<br>
+<br>
+The event-types HP_NOTE, HP_RPN and HP_NRPN make sense only as sequence of more than one elementary
+MIDI-event, we denote these as "Compount MIDI-events". For example HP_NOTE consists of the couple "Note On" and "Note Off"; RPN / NRPN of more ones.
+The user of HP MIDIFILE is not allowed to work with these special elementary events, but he is able
+to read events of these types. In the column "meaning" the comment "Hidden" is added here.
+<br>
+<br>
+In the MIDI specification Controller events have only one event-type but different functions, which are
+specified with a number of the Controller event. HP_MIDIFILE here spends for each Controller-number
+an own event-type. This method allows to identify the events more easy.
+<BR>
+<BR>
+Testing an application the function <A HREF="hp_type_name.html">HP_TypeName</A>, which returns the
+string of the type, may be helpful.
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+

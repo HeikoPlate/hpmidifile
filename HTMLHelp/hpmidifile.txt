@@ -1,0 +1,313 @@
+1 Introduction
+File: introduction.html OK
+2 Tutorials
+2.1 The Basics
+File: the_basics.html   OK
+2.2 How It Works
+File: how_it_works.html OK
+3 Reference
+File: general_facts_reference.html OK
+3.1 All Functions
+File: functions.html    OK
+3.2 Event Types / Error Codes
+3.2.1 Event Types
+3.2.1.1 General Facts
+File: general_facts_event_types.html OK
+3.2.1.2 Types
+File: event_types.html OK
+3.2.1.3 HP_TypeName     OK    
+3.2.2 Error Codes
+3.2.2.1 General Facts  OK
+File: general_facts_error_codes.html 
+3.2.2.2 Codes          OK
+File: error_codes.html 
+3.2.2.3 HP_ErrText     OK
+3.3 Basic Functions     
+3.3.1 Init / Load / Save / Free / New
+3.3.1.1 General Facts  OK
+File: general_facts_init_load_save_free_new.html
+3.3.1.2 HP_Init        OK
+3.3.1.3 HP_Load        OK
+3.3.1.4 HP_Save        OK
+3.3.1.5 HP_Free        OK
+3.3.1.6 HP_New         OK
+3.3.1.7 Samples        OK
+3.3.2 PPQN
+3.3.2.1 General Facts  OK
+File: general_facts_ppqn.html
+3.3.2.2 HP_ReadPPQN    OK
+3.3.2.3 HP_ChangePPQN  OK
+3.3.2.4 Samples        OK
+3.3.3 Time 
+3.3.3.1 General Facts  OK
+File: general_facts_time.html
+3.3.3.2 HP_GetTaktBeatTick          OK
+3.3.3.3 HP_GetTimeFromTaktBeatTick  OK
+3.3.3.4 Samples                     OK
+
+3.3.4 Selection
+3.3.4.1 General Facts                   OK
+3.3.4.2 HP_Select                       OK
+3.3.4.3 HP_SelectChanTime               OK
+3.3.4.4 HP_Deselect                     OK
+3.3.4.5 HP_DeselectChan                 OK
+3.3.4.6 Samples                         OK
+
+3.3.5 Copy / Paste
+3.3.5.1 General Facts                   OK
+3.3.5.2 HP_Copy                         OK
+3.3.5.3 HP_ChangeChannelInBuffer        OK
+3.3.5.4 HP_Paste                        OK
+3.3.5.5 Samples                         OK
+
+3.3.6 Stream Access
+3.3.6.1 General Facts                   OK
+3.3.6.2 HP_Rewind                       OK
+3.3.6.3 HP_ReadEvent                    OK
+3.3.6.4 Samples                         OK
+
+3.3.7 Other Functions
+3.3.7.1 HP_ShiftEvent                   OK
+3.3.7.2 HP_ShiftSelected                OK
+3.3.7.3 HP_DeleteEvent                  OK
+3.3.7.4 HP_ChangeChannel                OK
+3.3.7.5 HP_SetFirst                     OK
+3.3.7.6 Samples                         OK
+
+3.4 Standard Events
+File: general_facts_standard_events.html OK
+
+3.4.1 Notes
+3.4.1.1 General Facts                   OK
+3.4.1.2 HP_ReadNote                     OK
+3.4.1.3 HP_InsertNote                   OK
+3.4.1.4 HP_ChangeNote                   OK
+3.4.1.5 HP_ChangeVelocity               OK
+3.4.1.6 HP_ChangeVelocitySelected       OK
+3.4.1.7 HP_ChangeNoteLength             OK
+3.4.1.8 HP_TransposeSelected            OK
+3.4.1.9 HP_QuantisizeSelected           OK
+3.4.1.10 HP_ShiftNotesSelected          OK
+3.4.1.11 HP_SettleOverlappingNotes      OK
+3.4.1.12 HP_DeleteShortNotes            OK
+3.4.1.13 Samples                        OK
+
+3.4.2 Aftertouch
+3.4.2.1 HP_ReadAftertouch
+3.4.2.2 HP_InsertAftertouch
+3.4.2.3 HP_ChangeAftertouch
+3.4.2.4 Samples
+
+3.4.3 Controller
+3.4.3.1 General Facts
+3.4.3.2 HP_ReadController
+3.4.3.3 HP_InsertController
+3.4.3.4 HP_ChangeController
+3.4.3.5 HP_ChangeControllerSelected
+3.4.3.6 Samples
+
+3.4.4 RPN / NRPN
+3.4.4.1 General Facts
+3.4.4.2 HP_ReadRPN
+3.4.4.3 HP_InsertRPNAbsolute
+3.4.4.4 HP_InsertRPNIDcrement
+3.4.4.5 HP_ChangeRPNAbsolute
+3.4.4.6 HP_ChangeRPNIDcrement
+3.4.4.7 HP_ReadNRPN
+3.4.4.8 HP_InsertNRPNAbsolute
+3.4.4.9 HP_InsertNRPNIDcrement
+3.4.4.10 HP_ChangeNRPNAbsolute
+3.4.4.11 HP_ChangeNRPNIDcrement
+3.4.4.12 Samples
+
+3.4.5 Program Change
+3.4.5.1 HP_ReadProgramChange
+3.4.5.2 HP_InsertProgramChange
+3.4.5.3 HP_ChangeProgram
+3.4.5.4 Samples
+
+3.4.6 Channel Pressure
+3.4.6.1 HP_ReadChannelPressure
+3.4.6.2 HP_InsertChannelPressure
+3.4.6.3 HP_ChangeChannelPressure
+3.4.6.4 Samples
+
+3.4.7 Pitch Wheel
+3.4.7.1 HP_ReadPitchWheel
+3.4.7.2 HP_InsertPitchWheel
+3.4.7.3 HP_ChangePitchWheel
+3.4.7.4 Samples
+
+3.5 SysEx
+3.5.1 General Facts
+3.5.2 HP_ReadSysEx
+3.5.3 HP_InsertSysEx
+3.5.4 HP_ChangeSysEx
+3.5.5 Samples
+
+3.6 Meta Events
+
+3.6.1 Sequence Number
+3.6.1.1 HP_ReadSequenceNumber
+3.6.1.2 HP_InsertSequenceNumber
+3.6.1.3 HP_ChangeSequenceNumber
+3.6.1.4 Samples
+
+3.6.2 Text
+3.6.2.1 HP_ReadText
+3.6.2.2 HP_InsertText
+3.6.2.3 HP_ChangeText
+3.6.2.4 Samples
+
+3.6.3 Copyright
+3.6.3.1 HP_ReadCopyright
+3.6.3.2 HP_InsertCopyright
+3.6.3.3 HP_ChangeCopyright
+3.6.3.4 Samples
+
+3.6.4 Track Name
+3.6.4.1 HP_ReadTrackName
+3.6.4.2 HP_InsertTrackName
+3.6.4.3 HP_ChangeTrackName
+3.6.4.4 Samples
+
+3.6.5 Instrument Name
+3.6.5.1 HP_ReadInstrument
+3.6.5.2 HP_InsertInstrument
+3.6.5.3 HP_ChangeInstrument
+3.6.5.4 Samples
+
+3.6.6 Lyric
+3.6.6.1 HP_ReadLyric
+3.6.6.2 HP_InsertLyric
+3.6.6.3 HP_ChangeLyric
+3.6.6.4 Samples
+
+3.6.7 Marker
+3.6.7.1 HP_ReadMarker
+3.6.7.2 HP_InsertMarker
+3.6.7.3 HP_ChangeMarker
+3.6.7.4 Samples
+
+3.6.8 Cue Point
+3.6.8.1 HP_ReadCuePoint
+3.6.8.2 HP_InsertCuePoint
+3.6.8.3 HP_ChangeCuePoint
+3.6.8.4 Samples
+
+3.6.9 MIDI Port
+3.6.9.1 HP_ReadMidiPort
+3.6.9.2 HP_InsertMidiPort
+3.6.9.3 HP_ChangeMidiPort
+3.6.9.4 Samples
+
+3.6.10 Tempo
+3.6.10.1 HP_ReadTempo
+3.6.10.2 HP_InsertTempo
+3.6.10.3 HP_ChangeTempo
+3.6.10.4 Samples
+
+3.6.11 SMPTE Offset
+3.6.11.1 HP_ReadSmpteOffset
+3.6.11.2 HP_InsertSmpteOffset
+3.6.11.3 HP_ChangeSmpteOffset
+3.6.11.4 Samples
+
+3.6.12 Time Signature
+3.6.12.1 HP_ReadTimeSignature
+3.6.12.2 HP_InsertTimeSignature
+3.6.12.3 HP_ChangeTimeSignature
+3.6.12.4 Samples
+
+3.6.13 Key Signature
+3.6.13.1 HP_ReadKeySignature
+3.6.13.2 HP_InsertKeySignature
+3.6.13.3 HP_ChangeKeySignature
+3.6.13.4 Samples
+
+
+3.7 Yamaha Meta Events
+
+3.7.1 General Facts
+
+3.7.2 Score Start Bar
+3.7.2.1 HP_ReadScoreStartBar
+3.7.2.2 HP_InsertScoreStartBar
+3.7.2.3 Samples
+
+3.7.3 Score Layout
+3.7.3.1 HP_ReadScoreLayout
+3.7.3.2 HP_InsertScoreLayout
+3.7.3.3 Samples
+
+3.7.4 Quickstart
+3.7.4.1 HP_ReadQuickStart
+3.7.4.2 HP_InsertQuickStart
+3.7.4.3 Samples
+
+3.7.5 Keyboard Voice
+3.7.5.1 HP_ReadKeyboardVoice
+3.7.5.2 HP_InsertKeyboardVoice
+3.7.5.3 Samples
+
+3.7.6 XF Version ID
+3.7.6.1 HP_ReadXFVersionID
+3.7.6.2 HP_InsertXFVersionID
+3.7.6.3 Samples
+
+3.7.7 Chord
+3.7.7.1 HP_ReadChord
+3.7.7.2 HP_InsertChord
+3.7.7.3 HP_ChangeChord
+3.7.7.4 Samples
+
+3.7.8 Rehearsal Mark
+3.7.8.1 HP_ReadRehearsalMark
+3.7.8.2 HP_InsertRehearsalMark
+3.7.8.3 Samples
+
+3.7.9 Phrase Mark
+3.7.9.1 HP_ReadPhraseMark
+3.7.9.2 HP_InsertPhraseMark
+3.7.9.3 Samples
+
+3.7.10 Max Phrase Mark
+3.7.10.1 HP_ReadMaxPhraseMark
+3.7.10.2 HP_InsertMaxPhraseMark
+3.7.10.3 Samples
+
+3.7.11 Fingering Number
+3.7.11.1 HP_ReadFingeringNumber
+3.7.11.2 HP_InsertFingeringNumber
+3.7.11.3 Samples
+
+3.7.12 Guide Track Flag
+3.7.12.1 HP_ReadGuideTrackFlag
+3.7.12.2 HP_InsertGuideTrackFlag
+3.7.12.3 Samples
+
+3.7.13 Guitar Information Flag
+3.7.13.1 HP_ReadGuitarInformationFlag
+3.7.13.2 HP_InsertGuitarInformationFlag
+3.7.13.3 Samples
+
+3.7.14 Chord Voicing For Guitar
+3.7.14.1 HP_ReadChordVoicingForGuitar
+3.7.14.2 HP_InsertChordVoicingForGuitar
+3.7.14.3 Samples
+
+3.7.15 Lyrics Bitmap
+3.7.15.1 HP_ReadLyricsBitmap
+3.7.15.2 HP_InsertLyricsBitmap
+3.7.15.3 Samples
+
+3.7.16 Other YAMAHA Meta
+3.7.16.1 HP_ReadOtherYamahaMeta
+3.7.16.2 HP_InsertOtherYamahaMeta
+3.7.16.3 Samples
+
+3.8 Raw Event
+3.8.1 General Facts
+3.8.2 HP_InsertRawEvent
+3.8.3 HP_ReadEventData
+3.8.4 Samples

@@ -1,0 +1,88 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>HP_Paste</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_change_channel_in_buffer.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+</A>
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+</A>
+<A ID=buttonbar HREF="samples_copy_paste.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<A HREF="functions.html"><H5>[all functions]</A></H5>
+<H2><A NAME="HP_Paste">HP_Paste</A></H2>
+To paste all MIDI-events of the global buffer into a MIDIFile-session. We can specifiy, if
+the events of one or all MIDI-channels will be deleted in the target-region before. <BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_Paste</B>
+<BR><B>(</B><BR>
+<B>HP_MIDIFILE_MODULE *</B><I>hphandle</I><B>,</B><BR>
+<B>int </B><I>time</I><B>,</B><BR>
+<B>bool </B><I>delete_in_dest</I><B>,</B><BR>
+<B>int </B><I>del_events_chan</I><BR>
+<B>);</B>
+<BR>
+
+<H3>Parameters</H3>
+<TABLE>
+<TR VALIGN=top><TD><I>hphandle</I></TD>
+<TD>Pointer to a HP_MIDIFILE handle.<BR></TD>
+<TR VALIGN=top><TD><I>time</I></TD>
+<TD>Starting time in the destination for the events to be inserted.<BR></TD>
+<TR VALIGN=top><TD><I>delete_in_dest</I></TD>
+<TD>HP_DELETE: The events in the copy-region will be deleted before.<BR>
+    HP_NO_DELETE: No delete of events in the copy-region before.<BR></TD>
+<TR VALIGN=top><TD><I>del_events_chan</I></TD>
+<TD>Only if delete_in_dest == HP_DELETE.<BR>
+    del_events_chan==HP_NO_CHAN: All events not associated with a channel are deleted.<BR>
+    del_events_chan==HP_ALL_EVENTS: All events are deleted.<BR>
+    0 &lt= del_events_chan &lt= 15: All events associated with the channel are deleted.<BR></TD>
+</TABLE>
+
+<H3>Return Value</H3>
+Error code. On success the code HP_ERR_NONE.<BR>
+See <A HREF="error_codes.html">Error codes</A>.<BR>
+
+<H3>Remarks</H3>
+
+If the PPQN of the MIDI-events in the global buffer differs from the PPQN in the target,
+the PPQN of the target will be changed to the buffer PPQN.
+
+<H3>See Also</H3>
+<A HREF="general_facts_copy_paste.html">General Facts</A>
+,
+<A HREF="general_facts_ppqn.html">PPQN: General facts</A>
+,
+<A HREF="general_facts_selection.html">Selection: General facts</A>
+
+</BODY>
+</HTML>

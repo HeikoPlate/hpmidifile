@@ -1,0 +1,377 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Instrument Definition Files: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_cwins_is_drum_voice.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="structure_hp_cwbank.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Instrument Definition Files: Samples</font></b>
+</p>
+
+<pre>
+// ...
+
+    UINT result;
+    // mf is a pointer to a handle of type HP_MIDIFILE_MODULE, we got with HP_Init().
+    CString r;
+
+// ========================================================
+    result = HP_CWInsLoad(mf,"c:\\tmp\\yamaha_kbds.ins");
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+// ========================================================
+    HP_CWDEF* def_list;
+    int no_defs;
+    int i;
+
+    result = HP_CWInsGetDefs(mf, &def_list, &no_defs);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+    for (i=0; i< no_defs; i++)
+    {
+        MessageBox(def_list[i].def_name,NULL,MB_OK);
+    }
+
+    HP_Delete(def_list);
+
+// ========================================================
+    result = HP_CWInsSetDef(mf,no_defs-1);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+// ========================================================
+        HP_CWBANK* bank_list;
+        int no_banks;
+
+        result = HP_CWInsGetBanks(mf, &bank_list, &no_banks);
+        if (result!=HP_ERR_NONE)
+        {
+                MessageBox(HP_ErrText(result),NULL,MB_OK);
+                return;
+        }
+
+        for (i=0; i< no_banks; i++)
+        {
+                r.Format("%i: %s",bank_list[i].bank_number,bank_list[i].bank_name);
+                MessageBox(r);
+        }
+
+        HP_Delete(bank_list);
+
+// ========================================================
+        char * bank_name;
+        HP_CWVOICE * voices;
+
+        result = HP_CWInsGetBankVoices(mf,113,&bank_name,&voices);
+
+        if (result!=HP_ERR_NONE)
+        {
+                MessageBox(HP_ErrText(result),NULL,MB_OK);
+                return;
+        }
+
+        MessageBox(bank_name, NULL, MB_OK);
+
+        for (i=0; i<32; i++)
+        {
+                MessageBox(voices[i].voice_name, NULL, MB_OK);
+        }
+
+        HP_Delete(voices);
+
+// ========================================================
+    char *bank_name;
+    char *voice_name;
+    char *note_name;
+
+    result = HP_CWInsGetBankVoiceNoteName(mf,114, 15, 48, &bank_name,&voice_name, &amp;note_name);
+
+// other calls
+//    result = HP_CWInsGetBankVoiceNoteName(mf,127*128+0, 27, 29, &bank_name,&voice_name, &amp;note_name);
+//    result = HP_CWInsGetBankVoiceNoteName(mf,HP_GM_VOICE_BANK, 32, 29, &bank_name,&voice_name, &amp;note_name);
+//    result = HP_CWInsGetBankVoiceNoteName(mf,HP_GM_PERC_BANK, 0, 71, &bank_name,&voice_name, &amp;note_name);
+//    result = HP_CWInsGetBankVoiceNoteName(mf,HP_GM_VOICE_BANK, 0, 48, &bank_name,&voice_name, &amp;note_name);
+
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+    }
+    else
+    {
+        r.Format("Bank %s, Patch %s, Note %s",bank_name, voice_name,note_name);
+        MessageBox(r,NULL,MB_OK);
+        HP_Delete(bank_name);
+        HP_Delete(voice_name);
+        HP_Delete(note_name);
+    }
+
+//  =======================================================
+
+	// first call of HP_CWInsGetBankVoiceList -------------
+	int i;
+
+	HP_CWBANKVOICE *bank_voice_list = NULL;
+	long bank_voice_list_len = 0;
+	char search_string[20] = "Live!";
+
+	result = HP_CWInsGetBankVoiceList(mf, search_string,
+						&bank_voice_list,&bank_voice_list_len);
+	if (result!=HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	for (i=0; i < bank_voice_list_len; i++)
+	{
+		r.Format("1. Bank %i: %s, Voice %i: %s",
+			(bank_voice_list[i]).bank_number,
+			(bank_voice_list[i]).bank_name,
+			(bank_voice_list[i]).voice_number,
+			(bank_voice_list[i]).voice_name);
+		MessageBox(r, NULL, MB_OK);
+	}
+
+	// refine search --------------------------------------
+	strcpy(search_string,"Live!Studio");
+	result = HP_CWInsGetBankVoiceList(mf, search_string,
+						&bank_voice_list,&bank_voice_list_len);
+	if (result!=HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	for (i=0; i < bank_voice_list_len; i++)
+	{
+		r.Format("2. Bank %i: %s, Voice %i: %s",
+			(bank_voice_list[i]).bank_number,
+			(bank_voice_list[i]).bank_name,
+			(bank_voice_list[i]).voice_number,
+			(bank_voice_list[i]).voice_name);
+		MessageBox(r,NULL,MB_OK);
+	}
+
+	// start a new search ---------------------------------
+	HP_Delete(bank_voice_list);
+
+	strcpy(search_string,"Grand Piano");
+	bank_voice_list_len = 0;
+	result = HP_CWInsGetBankVoiceList(mf, search_string,
+						&bank_voice_list,&bank_voice_list_len);
+	if (result!=HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+	for (i=0; i < bank_voice_list_len; i++)
+	{
+		r.Format("3. Bank %i: %s, Voice %i: %s",
+			(bank_voice_list[i]).bank_number,
+			(bank_voice_list[i]).bank_name,
+			(bank_voice_list[i]).voice_number,
+			(bank_voice_list[i]).voice_name);
+		MessageBox(r,NULL,MB_OK);
+	}
+	HP_Delete(bank_voice_list);
+
+// ========================================================
+
+    HP_CWNOTE* note_names;
+    char* bank_name;
+    char* voice_name;
+    int i;
+
+    result = HP_CWInsGetNoteNames(mf,16256,82,&bank_name,&voice_name,&amp;note_names);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+    for (i=0; i<128; i++)
+    {
+        r.Format("Note(%s,%s,%i): %s",bank_name,voice_name,i,note_names[i].note_name);
+        MessageBox(r);
+    }
+
+    HP_Delete(note_names);
+    HP_Delete(bank_name);
+    HP_Delete(voice_name);
+
+// other calls
+//  result = HP_CWInsGetNoteNames(mf,HP_GM_VOICE_BANK,1,&bank_name,&voice_name,&amp;note_names);
+//  result = HP_CWInsGetNoteNames(mf,HP_GM_PERC_BANK,1,&bank_name,&voice_name,&amp;note_names);
+
+// ========================================================
+
+    char* controller_name;
+
+    result = HP_CWInsGetControllerName(mf,94,&controller_name);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+    }
+    else
+    {
+        r.Format("Controller Name %s",controller_name);
+        MessageBox(r,NULL,MB_OK);
+        HP_Delete(controller_name);
+    }
+
+// ========================================================
+    HP_CWCONTROLLER* controller_names;
+    int i;
+
+    result = HP_CWInsGetControllerNames(mf, &controller_names);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+    for (i=0; i<128; i++)
+    {
+        r.Format("Controller %i: %s",i,controller_names[i].controller_name);
+        MessageBox(r);
+    }
+
+    HP_Delete(controller_names);
+
+// ========================================================
+
+    char* rpn_name;
+
+    result = HP_CWInsGetRPNName(mf,16383,&rpn_name);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+    }
+    else
+    {
+        r.Format("RPN Name %s",rpn_name);
+        MessageBox(r,NULL,MB_OK);
+        HP_Delete(rpn_name);
+    }
+
+// ========================================================
+    HP_CWRPN* rpn_list;
+    long no_rpn;
+    int i;
+
+    result = HP_CWInsGetRPNNames(mf, &rpn_list, &no_rpn);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+    for (i=0; (i < 32) && (i < no_rpn); i++)
+    {
+        r.Format("RPN %i: %s",rpn_list[i].rpn_number,rpn_list[i].rpn_name);
+        MessageBox(r);
+    }
+
+    HP_Delete(rpn_list);
+
+// ========================================================
+    char* nrpn_name;
+    result = HP_CWInsGetNRPNName(mf,180,&nrpn_name);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+    }
+    else
+    {
+        r.Format("NRPN Name %s",nrpn_name);
+        MessageBox(r,NULL,MB_OK);
+        HP_Delete(nrpn_name);
+    }
+
+// ========================================================
+    HP_CWNRPN* nrpn_list;
+    long no_nrpn;
+    int i;
+
+    result = HP_CWInsGetNRPNNames(mf, &nrpn_list, &no_nrpn);
+    if (result!=HP_ERR_NONE)
+    {
+        MessageBox(HP_ErrText(result),NULL,MB_OK);
+        return;
+    }
+
+    for (i=0; (i < 32) && (i < no_nrpn); i++) // max 32 outputs
+    {
+        r.Format("NRPN %i: %s",nrpn_list[i].nrpn_number,nrpn_list[i].nrpn_name);
+        MessageBox(r);
+    }
+
+    HP_Delete(nrpn_list);
+
+// ========================================================
+	long bank_no = 15360;
+	int voice_no = 24;
+	int is_drum;
+
+	result = HP_CWInsIsDrumVoice(mf, bank_no,voice_no,&is_drum);
+	if (result!=HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+	r.Format("bank_no %i,voice_no %i, is_drum %i",bank_no, voice_no, is_drum);
+	MessageBox(r);
+
+// ========================================================
+
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Tempo: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_change_tempo.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_smpte_offset.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Tempo: Samples</font></b>
+</p>
+
+<pre>
+
+
+int id, chan, time, type, result;
+int bpm, cps;
+double double_bpm;
+
+// Read Tempo (int and double)
+
+HP_Rewind(mf);
+
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_TEMPO)
+   {
+      result = HP_ReadTempo(mf,id,&time,&bpm,&cps);
+
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+
+      CString r;
+      r.Format("Tempo: %i BPM, %i cps",bpm,cps);
+      MessageBox(r,NULL,MB_OK);
+
+      result = HP_ReadTempo(mf,id,&time,&double_bpm,&cps);
+
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+
+      CString r;
+      r.Format("Tempo: %%4.2f BPM, %i cps",double_bpm,cps);
+      MessageBox(r,NULL,MB_OK);
+
+      break;
+   }
+}
+
+/* ============================================================================== */
+
+// Insert Tempo (int)
+
+result = HP_InsertTempo(mf,384,120); // time 384, tempo 120 bpm
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+/* ============================================================================== */
+
+// Change Tempo (int)
+result = HP_ChangeTempo(mf,HP_ALL_EVENTS,66,HP_PERCENT);
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

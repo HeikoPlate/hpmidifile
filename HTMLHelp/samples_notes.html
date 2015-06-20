@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Notes: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_delete_short_notes.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="hp_read_aftertouch.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Notes: Samples</font></b>
+</p>
+
+<pre>
+
+
+// Read note
+HP_Rewind(mf);
+int id, chan, time, type, value, vel, length;
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_NOTE)
+   {
+      HP_ReadNote(mf,id,&time,&chan,&value,&vel,&length);
+      break;
+   }
+}
+CString r;
+r.Format("Note: chan %i, note %i, velocity %i, length %i",chan,value,vel,length);
+MessageBox(r,NULL,MB_OK);
+
+/* ============================================================================== */
+
+// insert note
+result = HP_InsertNote(mf,0x78,0x78,0x40,0x01,0x64); // time/length/note/chan/vel
+if (result != HP_ERR_NONE)
+{
+	MessageBox(HP_ErrText(result),NULL,MB_OK);
+	return;
+}
+
+/* ============================================================================== */
+
+// Change note, velocity and length (first note found)
+HP_Rewind(mf);
+int id, chan, time, type;
+
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_NOTE)
+   {
+      HP_ChangeNote(mf,id,4,0x60,HP_ABSOLUTE);
+      HP_ChangeVelocity(mf,id,4,0x60,80,HP_PERCENT);
+      HP_ChangeNoteLength(mf,id,4,0x60,200,HP_PERCENT);
+      break;
+   }
+}
+
+/* ============================================================================== */
+
+// Change velocity of selected note events
+HP_SelectChanTime(mf,4); // select all events of MIDI-channel 4
+if (HP_ChangeVelocitySelected(mf,70,HP_PERCENT)!=HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+}
+
+/* ============================================================================== */
+
+// select and transpose notes
+HP_SelectChanTime(mf,4);
+if (HP_TransposeSelected(mf,2)!=HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+}
+
+/* ============================================================================== */
+
+// select and quantisize start-time of all notes of MIDI-channel 4 by quarter note
+HP_SelectChanTime(mf,4);
+if (HP_QuantisizeSelected(mf,4,true,false)!=HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+}
+
+/* ============================================================================== */
+
+// select and shift notes left for two quarters
+int ppqn;
+HP_ReadPPQN(mf, &ppqn);
+HP_SelectChanTime(mf,4);
+if (HP_ShiftNotesSelected(mf,-2*ppqn)!=HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+}
+
+/* ============================================================================== */
+
+// assemble all overlapping notes
+HP_SettleOverlappingNotes(mf,HP_ASSEMBLE);
+
+/* ============================================================================== */
+
+// delete all notes of note-length 0
+HP_DeleteShortNotes(0);
+
+/* ============================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

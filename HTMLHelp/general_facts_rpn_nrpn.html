@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>RPN / NRPN: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="samples_controller.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="hp_read_rpn.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">RPN / NRPN: General Facts</font></b>
+</p>
+<br>
+<br>
+
+<p><font face="Verdana" size="2">
+The extended controller events RPN and NRPN are compound events, i.e. these are built by four or
+three basic controller events. The first two, the RPN MSB resp. NRPN MSB and RPN LSB
+resp. NRPN LSB define the number by concatenation of two seven-bit-numbers. Similar the
+next two data MSB and Data LSB define the data-value by concatenation of two seven-bit-data.
+The data also can be defined to be relative by only one seven-bit-data: The events Data increment or the
+Data decrement. Here the last data-value will be incremented or decremented. The functions ending with
+"Relative" create or change events of the last types, the functions ending with "Absolute" create
+or change events with absolute data-values.
+<BR>
+<BR>
+The parameters RPN- and NRPN-numbers and the RPN- and NRPN-data-values have to be built by concatenations
+of the seven bits MSB with the seven bits LSB.
+<BR>
+<BR>
+HP MIDIFile manipulates RPN- and NRPN-events as entities. With the functions of HP MIDIFILE
+it is not possible to read, insert, change or delete the basic controller events of RPN and NRPN.
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+
+

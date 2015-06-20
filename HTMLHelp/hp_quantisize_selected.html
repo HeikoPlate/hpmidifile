@@ -1,0 +1,95 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>HP_QuantisizeSelected</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_transpose_selected.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+</A>
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+</A>
+<A ID=buttonbar HREF="hp_shift_notes_selected.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<A HREF="functions.html"><H5>[all functions]</A></H5>
+<H2><A NAME="HP_QuantisizeSelected">HP_QuantisizeSelected</A></H2>
+To quantisize selected note events.<BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_QuantisizeSelected</B>
+<BR><B>(</B><BR>
+<B>HP_MIDIFILE_MODULE *</B><I>hphandle</I><B>,</B><BR>
+<B>int </B><I>resolution</I><B>,</B><BR>
+<B>bool </B><I>start</I><B>,</B><BR>
+<B>bool </B><I>length</I><BR>
+<B>);</B>
+<BR>
+
+<H3>Parameters</H3>
+<TABLE>
+<TR VALIGN=top><TD><I>hphandle</I></TD>
+<TD>Pointer to a HP_MIDIFILE handle.<BR></TD>
+<TR VALIGN=top><TD><I>resolution</I></TD>
+<TD>Specificies the resolution of quantisizing.<BR>
+    resolution = 1: 1/1 note.<BR>
+    resolution = 13: Triole with 1/1 note.<BR>
+    resolution = 2: 1/2 note.<BR>
+    resolution = 23: Triole with 1/2 note.<BR>
+    resolution = 4: 1/4 note.<BR>
+    resolution = 43: Triole with 1/4 note.<BR>
+    resolution = 8: 1/8 note.<BR>
+    resolution = 83: Triole with 1/8 note.<BR>
+    resolution = 16: 1/16 note.<BR>
+ 	resolution = 163: Triole with 1/16 note.<BR>
+    resolution = 32: 1/32 note.<BR>
+    resolution = 64: 1/64 note.<BR>
+    </TD>
+<TR VALIGN=top><TD><I>start</I></TD>
+<TD>start = true: Start-times are quantisized.<BR>
+    start = false: Start-times are not quantisized.<BR></TD>
+<TR VALIGN=top><TD><I>length</I></TD>
+<TD>length = true: Note lengths are quantisized.<BR>
+    length = false: Note lengths are not quantisized.<BR></TD>
+</TABLE>
+
+<H3>Return Value</H3>
+Error code. On success the code HP_ERR_NONE.<BR>
+See <A HREF="error_codes.html">Error codes</A>.<BR>
+
+<H3>Remarks</H3>
+
+<H3>See Also</H3>
+<A HREF="general_facts_selection.html">Selection: General facts</A>
+,
+<A HREF="general_facts_notes.html">General facts</A>
+,
+<A HREF="samples_notes.html">Samples</A>
+
+</BODY>
+</HTML>

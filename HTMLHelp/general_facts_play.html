@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Play: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="samples_raw_event.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="hp_get_midi_devices.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Play: General Facts</font></b>
+</p>
+<br>
+<br>
+<p><font face="Verdana" size="2">
+HP MIDIFILE offers functions to play MIDI events of the actual MIDI-file session on all
+MIDI output devices of the soundcard. The first action is to find out the right MIDI device ID.
+The function HP_GetMIDIDevices creates a list of all ID's together with its names. After this
+the wanted device must be set with the function HP_SelectMIDIDevice, which is selected global for
+all MIDI-file sessions. If you want to select the Microsoft MIDI-Mapper always, you need not
+to use these function; the inital ID is connected to this device.
+<br>
+<br>
+The function HP_Play plays all or all selected MIDI events of a MIDI-file session. If the selection does
+starts with time > 0; the user can specify, that all SysEx-, Controller- and Program-Change-events
+of earlier times will be send before in order to get the correct voice-effects.
+<br>
+<br>
+HP_Play does not send any System-Common-Events like MIDI Start, MIDI Clock or MIDI Stop to synchronise
+a slave MIDI device.
+<br>
+<br>
+It is not possible, to finish a MIDI-file session with HP_Free, if a play is still
+running.
+<br>
+<br>
+HP MIDIFILE applies the functions of the "Platform SDK: Windows Multimedia"
+and the timer of the IReferenceClock Interface.
+<br>
+<br>
+HP MIDIFILE offers an interface for monitoring takt and beat, lyrics and YAMAHA chords while playing.
+<br>
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+
+

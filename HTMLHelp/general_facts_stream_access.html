@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Stream Access: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="samples_copy_paste.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="hp_rewind.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Stream Access: General Facts</font></b>
+</p>
+<br>
+<br>
+
+<p><font face="Verdana" size="2">
+
+During a MIDI-file session HP MIDIFILE helds all  MIDI-events in a dynamic array, the eventlist.
+The events are sorted in increasing order by its time-stamps.
+<BR>
+<BR>
+HP MIDIFILE offers functions which handles the eventlist as stream. Reading an event with the function
+HP_ReadEvent, we get back an "id", i.e. an index of the array eventlist. This "id" is used with
+a lot of functions to identify the event.
+<BR>
+<BR>
+It is allowed always to continue reading sequentially even if events are deleted or inserted into
+the eventlist, but we will not get a new id, which is increased by one from the last all time.
+Therefore it is not recommended to perform arithmetics with id's.
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+
+

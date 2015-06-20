@@ -1,0 +1,80 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>HP_ReadCopyright</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="samples_text.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+</A>
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+</A>
+<A ID=buttonbar HREF="hp_insert_copyright.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<A HREF="functions.html"><H5>[all functions]</A></H5>
+<H2><A NAME="HP_ReadCopyright">HP_ReadCopyright</A></H2>
+To read the text of a Copyright event, identified by its index "id" in the eventlist.<BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_ReadCopyright</B>
+<BR><B>(</B><BR>
+<B>HP_MIDIFILE_MODULE *</B><I>hphandle</I><B>,</B><BR>
+<B>int </B><I>id</I><B>,</B><BR>
+<B>int *</B><I>time</I><B>,</B><BR>
+<B>char **</B><I>text</I><BR>
+<B>);</B>
+<BR>
+
+<H3>Parameters</H3>
+<TABLE>
+<TR VALIGN=top><TD><I>hphandle</I></TD>
+<TD>Pointer to a HP_MIDIFILE handle.<BR></TD>
+<TR VALIGN=top><TD><I>id</I></TD>
+<TD>The index of the eventlist of the Copyright event.<BR></TD>
+<TR VALIGN=top><TD><I>time</I></TD>
+<TD>A pointer filled by the function with the event's position of time.<BR></TD>
+<TR VALIGN=top><TD><I>text</I></TD>
+<TD>A pointer of a string filled by the function with the text of the event.<BR></TD>
+</TABLE>
+
+<H3>Return Value</H3>
+Error code. On success the code HP_ERR_NONE.<BR>
+See <A HREF="error_codes.html">Error codes</A>.<BR>
+
+<H3>Remarks</H3>
+
+The function allocates memory for the string. It has to be destroyed afterwards by the user
+with "HP_Delete(text);".
+
+<H3>See Also</H3>
+
+<A HREF="samples_copyright.html">Samples</A>
+
+</BODY>
+</HTML>

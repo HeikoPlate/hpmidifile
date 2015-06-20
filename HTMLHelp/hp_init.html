@@ -1,0 +1,63 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>HP_Init</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_get_version.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+</A>
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+</A>
+<A ID=buttonbar HREF="hp_load.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<A HREF="functions.html"><H5>[all functions]</A></H5>
+<H2><A NAME="HP_Init">HP_Init</A></H2>
+The call of this function starts a MIDI-file session. The returned pointer is the
+first parameter for most function-calls of the same session.
+<BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_Init</B>
+<BR><B>(</B><BR>
+<B>);</B>
+<BR>
+<H3>Parameters</H3>
+
+<H3>Return Value</H3>
+On success a pointer to a handle of type HP_MIDIFILE_MODULE. NULL for a bad call.<BR>
+<H3>Remarks</H3>
+It is allowed to have more than one parallel MIDI-File session.<BR>
+<H3>See Also</H3>
+<A HREF="hp_free.html">HP_Free</A>
+,
+<A HREF="samples_basic_functions.html">Samples</A>
+
+</BODY>
+</HTML>

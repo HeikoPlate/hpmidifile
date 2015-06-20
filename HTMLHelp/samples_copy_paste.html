@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Copy / Paste: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_paste.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_stream_access.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Copy / Paste: Samples</font></b>
+</p>
+
+<pre>
+	// Buffer Test
+	// Select all and copy all (notes) in buffer.
+	// Change channel to 0. Load test and
+	// paste buffer, time = 0, delete events of chan 4.. Save in test1
+	//
+	// At this time a MIDI-file session is open with handle mf and loaded file midi0.mid.
+
+	result = HP_Select(mf,HP_ALL_EVENTS);
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	result = HP_Copy(mf);
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	result = HP_Free(mf); // close mf
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	HP_ChangeChannelInBuffer(0);
+
+	// Copy buffer in mfdest
+
+	HP_MIDIFILE_MODULE* mfdest = HP_Init();
+	if (mfdest == NULL)
+	{
+		MessageBox("Err HP_Init() destination",NULL,MB_OK);
+		return;
+	}
+
+	if (HP_Load(mfdest,"c:\\tmp\\test.mid" )!=HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	result = HP_Paste(mfdest,0,HP_DELETE,HP_ALL_EVENTS);
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	result = HP_ChangePPQN(mfdest,120);
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	result = HP_Save(mfdest,"c:\\tmp\\test1.mid",HP_SMF0);
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+
+	result = HP_Free(mfdest);
+	if (result != HP_ERR_NONE)
+	{
+		MessageBox(HP_ErrText(result),NULL,MB_OK);
+		return;
+	}
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

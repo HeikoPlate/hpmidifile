@@ -1,0 +1,147 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Visual Basic Interface</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="how_it_works.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="vb_net_interface.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Visual Basic Interface</font></b>
+</p>
+<br>
+<br>
+<font face="Verdana" size="4">
+<div align="center">
+How to use the library HP MIDIFILE with Visual Basic programs
+<br>
+from Michael P. Bedesem
+</font>
+</div>
+
+<p>
+The method is explained with a sample program that converts a midi type 1 file
+(c:\temp\test1.mid) to a midi type 0 file (c:\temp\new1.mid).
+</p>
+<p>
+The Visual Basic program consists of one form that has one command button called
+Command_1. The file HP_midifile.dll should be located in the same folder as the basic program.
+</p>
+<p>
+The method used here is to declare the names of dll functions that will be needed
+in the basic program using the internal identifications of the library.
+These "decorated names" are listed in the map-file HP_midifile.map.
+Care must be taken with the data type used. E.g. If the dll is expecting UINT,
+Visual Basic should use ByVal Long (See discussion in the text Hardcore
+Visual Basic by Bruce McKinney)
+</p>
+<p>
+The functions often refer to arguments such as HP_SMF0. The values expected by the
+dll are defined in the headerfile HP_midifile.h. For example the line
+</p>
+<pre>
+#define HP_SMF0		0	/* Standard MIDI file-format 0 */
+</pre>
+<p>
+means passing a "0" signifies a type 0 midi file.
+</p>
+<br>
+<br>
+<p> <b>The basic code in Form1</b> </p>
+<pre>
+========================================================
+
+Option Explicit
+Private Declare Function HP_Init Lib _
+"HP_midifile.dll" _
+Alias "?HP_Init@@YAPAVMIDIFile@@XZ" () As Long
+
+Private Declare Function HP_Load Lib _
+"HP_midifile.dll" _
+Alias "?HP_Load@@YAIPAVMIDIFile@@PBD@Z" (ByVal i As Long, ByVal s As String) As Long
+
+Private Declare Function HP_Save Lib _
+"HP_midifile.dll" _
+Alias "?HP_Save@@YAIPAVMIDIFile@@PBDH@Z" (ByVal i As Long, ByVal s As String, ByVal x As Long) As Long
+
+Private Declare Function HP_Free Lib _
+"HP_midifile.dll" _
+Alias "?HP_Free@@YAIPAVMIDIFile@@@Z" (ByVal i As Long) As Long
+
+Private Sub Command1_Click()
+    Dim mf As Long
+    Dim result As Long
+    Dim smf0 As Long
+    Dim HP_ERR_NONE As Long
+
+    smf0=0
+    HP_ERR_NONE=0
+
+    mf = HP_Init()
+    If mf = 0 Then
+      ' do some error handling here
+    End If
+
+    result = HP_Load(mf, "c:\temp\test1.mid")
+    If Not result = HP_ERR_NONE Then
+      ' do some error handling here
+    End If
+
+    result = HP_Save(mf, "c:\temp\new1.mid", smf0)
+    If Not result = HP_ERR_NONE Then
+      ' do some error handling here
+    End If
+
+    result = HP_Free(mf)
+    If Not result = HP_ERR_NONE Then
+      ' do some error handling here
+    End If
+
+End Sub
+
+========================================================
+</pre>
+<p>
+Due to the limitations of Visual Basic, the code will only run successfully in the compiled version.
+Otherwise an error 49 is generated.
+</p>
+The Microsoft suggested method to get around the error is to create a C++ wrapper for the call,
+but you will need a C++ compiler then. Search for articles in the internet or in the KnowledgeBase.
+</p>
+<br>
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+

@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Time: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_get_last_time.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_selection.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Time: Samples</font></b>
+</p>
+
+<pre>
+
+// ...
+
+int takt, beat, tick, time;
+UINT result;
+
+result = HP_GetTaktBeatTick(mf,0x4b0,&takt, &beat, &tick);
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+// The second implementation of HP_GetTaktBeatTick is an efficient method to be
+// applied, while scanning the eventlist
+
+int id, chan, time, type;
+int time_of_last_time_signature;
+int takt_of_last_time_signature;
+int num = 4;
+int denum = 4;
+int metronome_click,n32;
+
+int no_messages = 0;
+int max_messages = 10; // stop protocol after 10 notes found
+
+HP_Rewind(mf);
+
+while ( HP_ReadEvent(mf,&id,&chan,&time,&type) == HP_ERR_NONE)
+{
+   if (type == HP_TIME_SIGNATURE)
+   {
+      result = HP_ReadTimeSignature(mf,id,&time_of_last_time_signature,&num,&denum,&metronome_click,&n32);
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+      result = HP_GetTaktBeatTick(mf,time,&takt_of_last_time_signature,&beat,&tick);
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+      continue;
+   }
+
+   if (type == HP_NOTE)
+   {
+      if (no_messages >= 10) break;
+      result = HP_GetTaktBeatTick(mf,time,time_of_last_time_signature,takt_of_last_time_signature,num,denum,&takt,&beat,&tick);
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+      CString r;
+      r.Format("Note on time %i, takt %i, beat %i, tick %i",time, takt+1, beat+1, tick);
+      MessageBox(r);
+      no_messages++;
+   }
+}
+
+
+result = HP_GetTimeFromTaktBeatTick(mf,3,1,0,&time);
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+// Get number of ticks of the MIDI-file
+{
+   CString r;
+   int last_time;
+
+   result = HP_GetLastTime(mf,&last_time);
+   if (result!=HP_ERR_NONE)
+   {
+      MessageBox(HP_ErrText(result),NULL,MB_OK);
+   }
+   else
+   {
+      r.Format("Last Time %i",last_time);
+      MessageBox(r,NULL,MB_OK);
+   }
+}
+
+// ...
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

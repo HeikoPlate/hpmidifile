@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Time: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="samples_ppqn.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="hp_get_takt_beat_tick.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Time: General Facts</font></b>
+</p>
+<br>
+<br>
+
+<p><font face="Verdana" size="2">
+
+The MIDI-events in a track of a MIDI-file are connected with time-informations (deltatime) and
+sorted by increasing time.
+<br>
+<br>
+In an analogous way all events of HP MIDIFILE are connected with
+time-stamps, i.e. the number of ticks since beginning of all events. If a event is read from
+the eventlist, we get this time with the read-function. On the other side, if we insert an
+event, we have to set a parameter "time" with the desired time-stamp.
+<br>
+<br>
+The users of MIDI-applications most prefer to identify a time-position by three numbers:
+"takt", "beat" and "tick". "tick" here means the number of ticks (clocks or pulses) since
+the last beat. HP MIDIFILE offers two functions to convert "time" to "takt", "beat" and "tick"
+and also back from "takt", "beat", "tick" to "time".
+<br>
+<br>
+<b>Remarks:</b>
+<br>
+<br>
+The numbers "takt" and "beat" will be changed, if we delete or insert new Time-Signatures.
+The third number "tick" will be changed with a new value of PPQN.
+<br>
+<br>
+The time-stamp "time", used with HP MIDIFILE, is changed only with a new value of PPQN; it
+does not depend from Time-Signature events.
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+

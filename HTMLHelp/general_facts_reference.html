@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Reference: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="glossary.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Reference: General Facts</font></b>
+</p>
+<br>
+<br>
+
+<p><font face="Verdana" size="2">
+Reference is a description of all functions of HP MIDIFILE. For each group of functions the
+topics "General fact" and "Samples" are presented.
+<BR>
+<BR>
+<BR>
+<B> The denotation of MIDI-channels, MIDI-file-tracks, voice-, takt- and beat-numbers</B>
+<BR>
+<BR>
+With a lot of function we need to specify a number for a MIDI-channel or a track or a
+number for a voice. Sequencer-software most numbers the MIDI-channels and tracks starting from 1. The method of
+numbering voices differs: some start with 0, others with 1. Similarly with takt- and beat-numbers. In sequencer
+software the first takt and the first beat of a takt have the number 1.
+<BR>
+<BR>
+HP MIDIFILE consequently uses the internal numbering, which starts with 0. I.e.
+<BR>
+<BR>
+0 &lt= chan &lt= 15 with MIDI channels
+<BR>
+0 &lt= track with tracks
+<BR>
+0 &lt= voice &lt= 127 for voices
+<BR>
+0 &lt= takt with the numbers of measures
+<BR>
+0 &lt= beat &lt num with the beats of a measure
+<BR>
+<BR>
+<B> The structure of MIDI-files of type SMF1, created by HP MIDIFILE.</B>
+<BR>
+<BR>
+The MIDI-file will be created by the function HP_Save. Two MIDI-file-formats are possible:
+SMF0 or SMF1.
+<BR>
+<BR>
+SMF1 files get a fixed structure which is independed from the original SMF1-file, which is loaded
+with HP_Load. The SMF1 MIDI-file gets exactly 17 tracks. The first track (no. 0) is filled with all
+MIDI-events which are not associtated with a MIDI-channel. These are SysEx and most Meta-Events.
+The following 16 tracks are connected with MIDI-channels: track 1 for channel 0, track 2 for channel 1,
+... track 16 for channel 15. HP MIDIFILE does not use any trackname of the original MIDI-file,
+but it is allowed to create new ones.
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+
+

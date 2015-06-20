@@ -1,0 +1,104 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>HP_GetTaktBeatTick</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="general_facts_time.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+</A>
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+</A>
+<A ID=buttonbar HREF="hp_get_time_from_takt_beat_tick.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<A HREF="functions.html"><H5>[all functions]</A></H5>
+<H2><A NAME="HP_ErrText">HP_GetTaktBeatTick</A></H2>
+Computes takt, beat and tick by a given time-stamp.<BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_GetTaktBeatTick</B>
+<BR><B>(</B><BR>
+<B>HP_MIDIFILE_MODULE *</B><I>hphandle</I><B>,</B><BR>
+<B>int </B><I>time</I><B>,</B><BR>
+<B>int * </B><I>takt</I><B>,</B><BR>
+<B>int * </B><I>beat</I><B>,</B><BR>
+<B>int * </B><I>tick</I><BR>
+<B>);</B>
+<BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_GetTaktBeatTick</B>
+<BR><B>(</B><BR>
+<B>HP_MIDIFILE_MODULE *</B><I>hphandle</I><B>,</B><BR>
+<B>int </B><I>time</I><B>,</B><BR>
+<B>int </B><I>time_of_last_time_signature</I><B>,</B><BR>
+<B>int </B><I>takt_of_last_time_signature</I><B>,</B><BR>
+<B>int </B><I>num</I><B>,</B><BR>
+<B>int </B><I>denum</I><B>,</B><BR>
+<B>int * </B><I>takt</I><B>,</B><BR>
+<B>int * </B><I>beat</I><B>,</B><BR>
+<B>int * </B><I>tick</I><BR>
+<B>);</B>
+<BR>
+
+<H3>Parameters</H3>
+<TABLE>
+<TR VALIGN=top><TD><I>time</I></TD>
+<TD>The time-stamp, i.e. the number of ticks from the beginning.<BR></TD>
+<TR VALIGN=top><TD><I>takt</I></TD>
+<TD>A pointer to the takt, filled by the function.<BR></TD>
+<TR VALIGN=top><TD><I>beat</I></TD>
+<TD>A pointer to the beat, filled by the function..<BR></TD>
+<TR VALIGN=top><TD><I>tick</I></TD>
+<TD>A pointer to the ticks since last beat, filled by the function.<BR></TD>
+<TR VALIGN=top><TD><I>time_of_last_time_signature</I></TD>
+<TD>The time-stamp of the last time-signature event.<BR></TD>
+<TR VALIGN=top><TD><I>takt_of_last_time_signature</I></TD>
+<TD>The takt of the last time-signature event.<BR></TD>
+<TR VALIGN=top><TD><I>num</I></TD>
+<TD>The value of num, got with the the last time-signature event.<BR></TD>
+<TR VALIGN=top><TD><I>denum</I></TD>
+<TD>The value of num, got with the the last time-signature event.<BR></TD>
+</TABLE>
+
+<H3>Return Value</H3>
+Error code. On success the code HP_ERR_NONE.<BR>
+See <A HREF="error_codes.html">Error codes</A>.<BR>
+
+<H3>Remarks</H3>
+The second implementation of HP_GetTaktBeatTick is a efficient
+method to be applied when scanning the eventlist.<BR>
+
+
+<H3>See Also</H3>
+<A HREF="general_facts_time.html">General facts</A>
+,
+<A HREF="samples_time.html">Samples</A>
+</BODY>
+</HTML>

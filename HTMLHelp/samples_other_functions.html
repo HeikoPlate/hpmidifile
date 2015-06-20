@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Other Functions: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_set_first.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_standard_events.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Other Functions: Samples</font></b>
+</p>
+
+<pre>
+
+// ...
+
+// Shift first note by -384 ticks
+
+HP_Rewind(mf);
+int id, chan, time, type;
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_NOTE)
+   {
+	  HP_ShiftEvent(id,-384);
+      break;
+   }
+}
+
+/* ===================================================================================== */
+
+// Shift all events by 384 ticks
+
+HP_Select(mf,HP_ALL_EVENTS);
+result = HP_ShiftSelected(mf,+384);
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+/* ===================================================================================== */
+
+// Delete first two note-events
+
+int id, chan,time, type, no = 2;
+
+HP_Rewind(mf);
+
+while ( HP_ReadEvent(mf,&id,&chan,&time,&type) == HP_ERR_NONE)
+{
+   if (type == HP_NOTE)
+   {
+      HP_DeleteEvent(mf,id);
+      no--;
+      if (no==0) break;
+   }
+}
+
+/* ===================================================================================== */
+
+// Change channel for all notes of channel 7 to channel 5
+
+HP_Rewind(mf);
+HP_Deselect(mf);
+
+while ( HP_ReadEvent(mf,&id,&chan,&time,&type) == HP_ERR_NONE)
+{
+   if ((type == HP_NOTE) && (chan == 7)) HP_Select(mf,id);
+}
+
+HP_ChangeChannel(mf,5);
+
+/* ===================================================================================== */
+
+// Insert the SysEx "Turn General MIDI System On" to be the first event in the MIDI-file
+
+unsigned char gm_on[] = {0xf0,0x7e, 0x7f, 0x09, 0x01, 0xf7};
+
+HP_SetFirst(mf,HP_FIRST);
+
+result = HP_InsertSysEx(mf, 0, gm_on);
+
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+// ...
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

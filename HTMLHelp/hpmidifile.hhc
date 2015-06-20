@@ -1,0 +1,1397 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+        <param name="FrameName" value="introduction.htm">
+        <param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+        <LI> <OBJECT type="text/sitemap">
+                <param name="Name" value="Introduction">
+                <param name="Local" value="introduction.html">
+                </OBJECT>
+        <LI> <OBJECT type="text/sitemap">
+                <param name="Name" value="Tutorials">
+                </OBJECT>
+        <UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="The basics">
+                        <param name="Local" value="the_basics.html">
+                        </OBJECT>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="How it works">
+                        <param name="Local" value="how_it_works.html">
+                        </OBJECT>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Interfaces">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Visual Basic Interface">
+                                <param name="Local" value="visual_basic_interface.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="VB.Net Interface">
+                                <param name="Local" value="vb_net_interface.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="C# Interface">
+                                <param name="Local" value="c_sharp_interface.html">
+                                </OBJECT>
+                </UL>           
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Glossary">
+                        <param name="Local" value="glossary.html">
+                        </OBJECT>
+        </UL>           
+        <LI> <OBJECT type="text/sitemap">
+                <param name="Name" value="Reference">
+                </OBJECT>
+        <UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="General Facts">
+                        <param name="Local" value="general_facts_reference.html">
+                        </OBJECT>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="All functions">
+                        <param name="Local" value="functions.html">
+                        </OBJECT>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Event types / Error codes">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Event types">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_event_types.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Event types">
+                                        <param name="Local" value="event_types.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_TypeName">
+                                        <param name="Local" value="hp_type_name.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Error codes">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_error_codes.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Error codes">
+                                        <param name="Local" value="error_codes.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ErrText">
+                                        <param name="Local" value="hp_err_text.html">
+                                        </OBJECT>
+                        </UL>
+                
+                </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Basic functions">
+                        </OBJECT>
+                <UL>
+
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General facts">
+                                <param name="Local" value="general_facts_basic_functions.html">
+                                </OBJECT>
+
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Version/Init/Load/Save/ Free">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_GetVersion">
+                                        <param name="Local" value="hp_get_version.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Init">
+                                        <param name="Local" value="hp_init.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Load">
+                                        <param name="Local" value="hp_load.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Save">
+                                        <param name="Local" value="hp_save.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Free">
+                                        <param name="Local" value="hp_free.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_MoreChunks">
+                                        <param name="Local" value="hp_more_chunks.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_basic_functions.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="PPQN">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_ppqn.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadPPQN">
+                                        <param name="Local" value="hp_read_ppqn.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangePPQN">
+                                        <param name="Local" value="hp_change_ppqn.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_ppqn.html">
+                                        </OBJECT>
+                        </UL>           
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Time">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_time.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_GetTaktBeatTick">
+                                        <param name="Local" value="hp_get_takt_beat_tick.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_GetTimeFromTaktBeatTick">
+                                        <param name="Local" value="hp_get_time_from_takt_beat_tick.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_GetLastTime">
+                                        <param name="Local" value="hp_get_last_time.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_time.html">
+                                        </OBJECT>
+                        </UL>           
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Selection">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_selection.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Select">
+                                        <param name="Local" value="hp_select.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_SelectChanTime">
+                                        <param name="Local" value="hp_select_chan_time.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Deselect">
+                                        <param name="Local" value="hp_deselect.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_DeselectChan">
+                                        <param name="Local" value="hp_deselect_chan.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_selection.html">
+                                        </OBJECT>
+                        </UL>           
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Copy / Paste">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_copy_paste.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Copy">
+                                        <param name="Local" value="hp_copy.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeChannelInBuffer">
+                                        <param name="Local" value="hp_change_channel_in_buffer.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Paste">
+                                        <param name="Local" value="hp_paste.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_copy_paste.html">
+                                        </OBJECT>
+                        </UL>           
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Stream Access">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_stream_access.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_Rewind">
+                                        <param name="Local" value="hp_rewind.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadEvent">
+                                        <param name="Local" value="hp_read_event.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_stream_access.html">
+                                        </OBJECT>
+                        </UL>           
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Other Functions">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ShiftEvent">
+                                        <param name="Local" value="hp_shift_event.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ShiftSelected">
+                                        <param name="Local" value="hp_shift_selected.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_DeleteEvent">
+                                        <param name="Local" value="hp_delete_event.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeChannel">
+                                        <param name="Local" value="hp_change_channel.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_SetFirst">
+                                        <param name="Local" value="hp_set_first.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_other_functions.html">
+                                        </OBJECT>
+                        </UL>   
+                </UL>   
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Standard MIDI-events">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General Facts">
+                                <param name="Local" value="general_facts_standard_events.html">
+                                </OBJECT>
+                
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Notes">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_notes.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadNote">
+                                        <param name="Local" value="hp_read_note.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertNote">
+                                        <param name="Local" value="hp_insert_note.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeNote">
+                                        <param name="Local" value="hp_change_note.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeVelocity">
+                                        <param name="Local" value="hp_change_velocity.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeVelocitySelected">
+                                        <param name="Local" value="hp_change_velocity_selected.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeNoteLength">
+                                        <param name="Local" value="hp_change_note_length.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_TransposeSelected">
+                                        <param name="Local" value="hp_transpose_selected.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_QuantisizeSelected">
+                                        <param name="Local" value="hp_quantisize_selected.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ShiftNotesSelected">
+                                        <param name="Local" value="hp_shift_notes_selected.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_SettleOverlappingNotes">
+                                        <param name="Local" value="hp_settle_overlapping_notes.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_DeleteShortNotes">
+                                        <param name="Local" value="hp_delete_short_notes.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_notes.html">
+                                        </OBJECT>
+                        </UL>
+                        
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Aftertouch">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadAftertouch">
+                                        <param name="Local" value="hp_read_aftertouch.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertAftertouch">
+                                        <param name="Local" value="hp_insert_aftertouch.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeAftertouch">
+                                        <param name="Local" value="hp_change_aftertouch.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_aftertouch.html">
+                                        </OBJECT>
+                        
+                        </UL>
+                        
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Controller">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_controller.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadController">
+                                        <param name="Local" value="hp_read_controller.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertController">
+                                        <param name="Local" value="hp_insert_controller.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeController">
+                                        <param name="Local" value="hp_change_controller.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeControllerSelected">
+                                        <param name="Local" value="hp_change_controller_selected.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_controller.html">
+                                        </OBJECT>
+                        
+                        </UL>
+
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="RPN /NRPN">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_rpn_nrpn.html">
+                                        </OBJECT>
+
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="RPN">
+                                        </OBJECT>
+                                <UL>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_ReadRPN">
+                                                <param name="Local" value="hp_read_rpn.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_InsertRPNAbsolute">
+                                                <param name="Local" value="hp_insert_rpn_absolute.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_InsertRPNRelative">
+                                                <param name="Local" value="hp_insert_rpn_relative.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_ChangeRPNAbsolute">
+                                                <param name="Local" value="hp_change_rpn_absolute.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_ChangeRPNRelative">
+                                                <param name="Local" value="hp_change_rpn_relative.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="Samples">
+                                                <param name="Local" value="samples_rpn.html">
+                                                </OBJECT>
+                                </UL>           
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="NRPN">
+                                        </OBJECT>
+                                <UL>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_ReadNRPN">
+                                                <param name="Local" value="hp_read_nrpn.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_InsertNRPNAbsolute">
+                                                <param name="Local" value="hp_insert_nrpn_absolute.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_InsertNRPNRelative">
+                                                <param name="Local" value="hp_insert_nrpn_relative.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_ChangeNRPNAbsolute">
+                                                <param name="Local" value="hp_change_nrpn_absolute.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="HP_ChangeNRPNRelative">
+                                                <param name="Local" value="hp_change_nrpn_relative.html">
+                                                </OBJECT>
+                                        <LI> <OBJECT type="text/sitemap">
+                                                <param name="Name" value="Samples">
+                                                <param name="Local" value="samples_nrpn.html">
+                                                </OBJECT>
+                                </UL>                   
+                        </UL>
+
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Program Change">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadProgramChange">
+                                        <param name="Local" value="hp_read_program_change.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertProgramChange">
+                                        <param name="Local" value="hp_insert_program_change.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeProgram">
+                                        <param name="Local" value="hp_change_program.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_program_change.html">
+                                        </OBJECT>
+                
+                        </UL>
+
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Channel Pressure">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadChannelPressure">
+                                        <param name="Local" value="hp_read_channel_pressure.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertChannelPressure">
+                                        <param name="Local" value="hp_insert_channel_pressure.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeChannelPressure">
+                                        <param name="Local" value="hp_change_channel_pressure.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_channel_pressure.html">
+                                        </OBJECT>
+                                </UL>
+                                
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Pitch Wheel">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadPitchWheel">
+                                        <param name="Local" value="hp_read_pitch_wheel.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertPitchWheel">
+                                        <param name="Local" value="hp_insert_pitch_wheel.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangePitchWheel">
+                                        <param name="Local" value="hp_change_pitch_wheel.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_pitch_wheel.html">
+                                        </OBJECT>
+                                </UL>
+                        
+                </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="SysEx">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General facts">
+                                <param name="Local" value="general_facts_sysex.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_ReadSysEx">
+                                <param name="Local" value="hp_read_sysex.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_InsertSysEx">
+                                <param name="Local" value="hp_insert_sysex.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_ChangeSysEx">
+                                <param name="Local" value="hp_change_sysex.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Samples">
+                                <param name="Local" value="samples_sysex.html">
+                                </OBJECT>
+                </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Meta Events">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General Facts">
+                                <param name="Local" value="general_facts_meta_events.html">
+                                </OBJECT>
+
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Sequence Number">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_sequence_number.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadSequenceNumber">
+                                        <param name="Local" value="hp_read_sequence_number.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertSequenceNumber">
+                                        <param name="Local" value="hp_insert_sequence_number.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeSequenceNumber">
+                                        <param name="Local" value="hp_change_sequence_number.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_sequence_number.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Text">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadText">
+                                        <param name="Local" value="hp_read_text.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertText">
+                                        <param name="Local" value="hp_insert_text.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeText">
+                                        <param name="Local" value="hp_change_text.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_text.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Copyright">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadCopyright">
+                                        <param name="Local" value="hp_read_copyright.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertCopyright">
+                                        <param name="Local" value="hp_insert_copyright.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeCopyright">
+                                        <param name="Local" value="hp_change_copyright.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_copyright.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Song/Track Name">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadSongTrackName">
+                                        <param name="Local" value="hp_read_song_track_name.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertSongTrackName">
+                                        <param name="Local" value="hp_insert_song_track_name.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeSongTrackName">
+                                        <param name="Local" value="hp_change_song_track_name.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_song_track_name.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Instrument">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadInstrument">
+                                        <param name="Local" value="hp_read_instrument.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertInstrument">
+                                        <param name="Local" value="hp_insert_instrument.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeInstrument">
+                                        <param name="Local" value="hp_change_instrument.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_instrument.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Lyric">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadLyric">
+                                        <param name="Local" value="hp_read_lyric.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertLyric">
+                                        <param name="Local" value="hp_insert_lyric.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeLyric">
+                                        <param name="Local" value="hp_change_lyric.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_lyric.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Marker">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadMarker">
+                                        <param name="Local" value="hp_read_marker.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertMarker">
+                                        <param name="Local" value="hp_insert_marker.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeMarker">
+                                        <param name="Local" value="hp_change_marker.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_marker.html">
+                                        </OBJECT>
+
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Cue Point">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadCuePoint">
+                                        <param name="Local" value="hp_read_cue_point.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertCuePoint">
+                                        <param name="Local" value="hp_insert_cue_point.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeCuePoint">
+                                        <param name="Local" value="hp_change_cue_point.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_cue_point.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="MIDI Port">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_midi_port.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadMIDIPort">
+                                        <param name="Local" value="hp_read_midi_port.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertMIDIPort">
+                                        <param name="Local" value="hp_insert_midi_port.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeMIDIPort">
+                                        <param name="Local" value="hp_change_midi_port.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_midi_port.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Tempo">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_tempo.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadTempo">
+                                        <param name="Local" value="hp_read_tempo.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertTempo">
+                                        <param name="Local" value="hp_insert_tempo.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeTempo">
+                                        <param name="Local" value="hp_change_tempo.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_tempo.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="SMPTE Offset">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_smpte_offset.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadSmpteOffset">
+                                        <param name="Local" value="hp_read_smpte_offset.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertSmpteOffset">
+                                        <param name="Local" value="hp_insert_smpte_offset.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeSmpteOffset">
+                                        <param name="Local" value="hp_change_smpte_offset.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_smpte_offset.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Time Signature">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_time_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadTimeSignature">
+                                        <param name="Local" value="hp_read_time_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertTimeSignature">
+                                        <param name="Local" value="hp_insert_time_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeTimeSignature">
+                                        <param name="Local" value="hp_change_time_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_time_signature.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Key Signature">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_key_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadKeySignature">
+                                        <param name="Local" value="hp_read_key_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertKeySignature">
+                                        <param name="Local" value="hp_insert_key_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeKeySignature">
+                                        <param name="Local" value="hp_change_key_signature.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_key_signature.html">
+                                        </OBJECT>
+                        </UL>
+
+                </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="YAMAHA Meta Events">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General Facts">
+                                <param name="Local" value="general_facts_yamaha_meta_events.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Score Start Bar">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadScoreStartBar">
+                                        <param name="Local" value="hp_read_score_start_bar.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertScoreStartBar">
+                                        <param name="Local" value="hp_insert_score_start_bar.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_score_start_bar.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Score Layout">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadScoreLayout">
+                                        <param name="Local" value="hp_read_score_layout.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertScoreLayout">
+                                        <param name="Local" value="hp_insert_score_layout.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_score_layout.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="QuickStart">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadQuickStart">
+                                        <param name="Local" value="hp_read_quick_start.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertQuickStart">
+                                        <param name="Local" value="hp_insert_quick_start.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_quick_start.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Keyboard Voice">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadKeyboardVoice">
+                                        <param name="Local" value="hp_read_keyboard_voice.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertKeyboardVoice">
+                                        <param name="Local" value="hp_insert_keyboard_voice.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_keyboard_voice.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="XF Version ID">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadXFVersionID">
+                                        <param name="Local" value="hp_read_xf_version_id.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertXFVersionID">
+                                        <param name="Local" value="hp_insert_xf_version_id.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_xf_version_id.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Chord">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_chord.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadChord">
+                                        <param name="Local" value="hp_read_chord.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertChord">
+                                        <param name="Local" value="hp_insert_chord.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ChangeChord">
+                                        <param name="Local" value="hp_change_chord.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ConverChordToText">
+                                        <param name="Local" value="hp_convert_chord_to_text.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_chord.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Rehearsal Mark">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadRehearsalMark">
+                                        <param name="Local" value="hp_read_rehearsal_mark.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertRehearsalMark">
+                                        <param name="Local" value="hp_insert_rehearsal_mark.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_rehearsal_mark.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Phrase Mark">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadPhraseMark">
+                                        <param name="Local" value="hp_read_phrase_mark.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertPhraseMark">
+                                        <param name="Local" value="hp_insert_phrase_mark.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_phrase_mark.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Max Phrase Mark">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadMaxPhraseMark">
+                                        <param name="Local" value="hp_read_max_phrase_mark.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertMaxPhraseMark">
+                                        <param name="Local" value="hp_insert_max_phrase_mark.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_max_phrase_mark.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Fingering Number">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadFingeringNumber">
+                                        <param name="Local" value="hp_read_fingering_number.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertFingeringNumber">
+                                        <param name="Local" value="hp_insert_fingering_number.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_fingering_number.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Guide Track Flag">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadGuideTrackFlag">
+                                        <param name="Local" value="hp_read_guide_track_flag.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertGuideTrackFlag">
+                                        <param name="Local" value="hp_insert_guide_track_flag.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_guide_track_flag.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Guitar Information Flag">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadGuitarInformationFlag">
+                                        <param name="Local" value="hp_read_guitar_information_flag.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertGuitarInformationFlag">
+                                        <param name="Local" value="hp_insert_guitar_information_flag.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_guitar_information_flag.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Chord Voicing for Guitar">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadChordVoicingForGuitar">
+                                        <param name="Local" value="hp_read_chord_voicing_for_guitar.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertChordVoicingForGuitar">
+                                        <param name="Local" value="hp_insert_chord_voicing_for_guitar.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_chord_voicing_for_guitar.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Lyrics Bitmap">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadLyricsBitmap">
+                                        <param name="Local" value="hp_read_lyrics_bitmap.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertLyricsBitmap">
+                                        <param name="Local" value="hp_insert_lyrics_bitmap.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_lyrics_bitmap.html">
+                                        </OBJECT>
+                        </UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Other YAMAHA Meta">
+                                </OBJECT>
+                        <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_ReadOtherYamahaMeta">
+                                        <param name="Local" value="hp_read_other_yamaha_meta.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InsertOtherYamahaMeta">
+                                        <param name="Local" value="hp_insert_other_yamaha_meta.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_other_yamaha_meta.html">
+                                        </OBJECT>
+                        </UL>
+
+                </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Raw Event">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General facts">
+                                <param name="Local" value="general_facts_raw_event.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_ReadEventData">
+                                <param name="Local" value="hp_read_event_data.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_InsertRawEvent">
+                                <param name="Local" value="hp_insert_raw_event.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Samples">
+                                <param name="Local" value="samples_raw_event.html">
+                                </OBJECT>
+                </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Play Functions">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General facts">
+                                <param name="Local" value="general_facts_play.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_GetMIDIDevices">
+                                <param name="Local" value="hp_get_midi_devices.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_SelectMIDIDevice">
+                                <param name="Local" value="hp_select_midi_device.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_Play">
+                                <param name="Local" value="hp_play.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_SetPlayStopWait">
+                                <param name="Local" value="hp_set_play_stop_wait.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_SetPlayTime">
+                                <param name="Local" value="hp_set_play_time.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_PlayTempo">
+                                <param name="Local" value="hp_play_tempo.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_PlayMute">
+                                <param name="Local" value="hp_play_mute.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_PlayTranspose">
+                                <param name="Local" value="hp_play_transpose.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_PlaySingleEvent">
+                                <param name="Local" value="hp_play_single_event.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_Duration">
+                                <param name="Local" value="hp_duration.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_PlayTime">
+                                <param name="Local" value="hp_play_time.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_PlayEventTime">
+                                <param name="Local" value="hp_play_event_time.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_IsPlaying">
+                                <param name="Local" value="hp_is_playing.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Samples">
+                                <param name="Local" value="samples_play.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_DEVICE">
+                                <param name="Local" value="structure_hp_device.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Play Monitoring">
+                                </OBJECT>
+                                <UL>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="General facts">
+                                        <param name="Local" value="general_facts_play_monitoring.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_PLAY_MONITOR">
+                                        <param name="Local" value="hp_play_monitor.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_PlayTBMonitor">
+                                        <param name="Local" value="hp_play_tb_monitor.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_PlayChMonitor">
+                                        <param name="Local" value="hp_play_ch_monitor.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_PlayLyMonitor">
+                                        <param name="Local" value="hp_play_ly_monitor.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="HP_InitPlayMonitor">
+                                        <param name="Local" value="hp_init_play_monitor.html">
+                                        </OBJECT>
+                                <LI> <OBJECT type="text/sitemap">
+                                        <param name="Name" value="Samples">
+                                        <param name="Local" value="samples_play_monitoring.html">
+                                        </OBJECT>
+                                </UL>           
+                                
+                        </UL>
+                <LI> <OBJECT type="text/sitemap">
+                        <param name="Name" value="Cakewalk Instrument Definition Files">
+                        </OBJECT>
+                <UL>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="General facts">
+                                <param name="Local" value="general_facts_cwins.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsLoad">
+                                <param name="Local" value="hp_cwins_load.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetDefs">
+                                <param name="Local" value="hp_cwins_get_defs.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsSetDef">
+                                <param name="Local" value="hp_cwins_set_def.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetBanks">
+                                <param name="Local" value="hp_cwins_get_banks.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetBankVoices">
+                                <param name="Local" value="hp_cwins_get_bank_voices.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetBankVoiceList">
+                                <param name="Local" value="hp_cwins_get_bank_voice_list.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetBankVoiceNoteName">
+                                <param name="Local" value="hp_cwins_get_bank_voice_note_name.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetNoteNames">
+                                <param name="Local" value="hp_cwins_get_note_names.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetControllerName">
+                                <param name="Local" value="hp_cwins_get_controller_name.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetControllerNames">
+                                <param name="Local" value="hp_cwins_get_controller_names.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetRPNName">
+                                <param name="Local" value="hp_cwins_get_rpn_name.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetRPNNames">
+                                <param name="Local" value="hp_cwins_get_rpn_names.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetNRPNName">
+                                <param name="Local" value="hp_cwins_get_nrpn_name.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsGetNRPNNames">
+                                <param name="Local" value="hp_cwins_get_nrpn_names.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="HP_CWInsIsDrumVoice">
+                                <param name="Local" value="hp_cwins_is_drum_voice.html">
+                                </OBJECT>
+                       <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Samples">
+                                <param name="Local" value="samples_cwins.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWBANK">
+                                <param name="Local" value="structure_hp_cwbank.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWCONTROLLER">
+                                <param name="Local" value="structure_hp_cwcontroller.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWDEF">
+                                <param name="Local" value="structure_hp_cwdef.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWNOTE">
+                                <param name="Local" value="structure_hp_cwnote.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWNRPN">
+                                <param name="Local" value="structure_hp_cwnrpn.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWRPN">
+                                <param name="Local" value="structure_hp_cwrpn.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWVOICE">
+                                <param name="Local" value="structure_hp_cwvoice.html">
+                                </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+                                <param name="Name" value="Structure: HP_CWBANKVOICE">
+                                <param name="Local" value="structure_hp_cwbankvoice.html">
+                                </OBJECT>
+                </UL>
+        </UL>
+</UL>
+</BODY>
+</HTML>

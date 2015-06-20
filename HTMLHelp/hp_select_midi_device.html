@@ -1,0 +1,76 @@
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>HP_SelectMIDIDevice</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_get_midi_devices.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+</A>
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+</A>
+<A ID=buttonbar HREF="hp_play.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<A HREF="functions.html"><H5>[all functions]</A></H5>
+<H2><A NAME="HP_SelectMIDIDevice">HP_SelectMIDIDevice</A></H2>
+To select a MIDI-device for play MIDI events.<BR>
+
+<P>
+<B>HP_MIDIFILE_API UINT </B><B> </B><B>HP_SelectMIDIDevice</B>
+<BR><B>(</B><BR>
+<B>int </B><I>id</I><BR>
+<B>);</B>
+<BR>
+
+<H3>Parameters</H3>
+<TABLE>
+<TR VALIGN=top><TD><I>id</I></TD>
+<TD>The ID of a MIDI output device.
+<BR></TD>
+</TABLE>
+
+<H3>Return Value</H3>
+Error code. On success the code HP_ERR_NONE.<BR>
+See <A HREF="error_codes.html">Error codes</A>.<BR>
+
+<H3>Remarks</H3>
+
+The selection is global for all MIDI sessions.
+<BR>
+The inital MIDI-device of HP MIDIFile is the Microsoft MIDI-Mapper.
+
+<H3>See also</H3>
+<A HREF="hp_get_midi_devices.html">HP_GetMIDIDevices</A>
+,
+<A HREF="general_facts_play.html">General Facts</A>
+,
+<A HREF="hp_play.html">Samples</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Glossary</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="c_sharp_interface.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_reference.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<H1>Glossary</H1>
+
+
+<div id=Functionsdetails style="display; position:relative; left:12;">
+
+<TABLE>
+
+<TR VALIGN=top><TD><I><B>delta-time</B></I></TD>
+  <TD>The number of ticks since the previous time-stamp.<br></TD>
+<TR VALIGN=top><TD><I><B>MIDI-event</B></I></TD>
+  <TD>Elementary sequence of bytes with a specific function to be interpreted<br>
+     by a MIDI sound-generator. In a MIDI-file the events are preceded by the<br>
+     delta-time, related to the previous event. delta-time specifies the time<br>
+     when the event must be sent.<br></TD>
+<TR VALIGN=top><TD><I><B>MIDI-file session</B></I></TD>
+  <TD>All function-calls connected with only one handle.<br>
+      A session is started with the call of HP_INIT() to get this handle and<br>
+      ends when deleting the handle with the call of HP_FREE(&handle).<br></TD>
+<TR VALIGN=top><TD><I><B>SMF0</B></I></TD>
+  <TD>Standard MIDI-file of format 0.<br></TD>
+<TR VALIGN=top><TD><I><B>SMF1</B></I></TD>
+  <TD>Standard MIDI-file of format 1.<br></TD>
+<TR VALIGN=top><TD><I><B>time-stamp</B></I></TD>
+  <TD>The number of ticks of an MIDI-event since start.<br></TD>
+<TR VALIGN=top><TD><I><B>track</B></I></TD>
+  <TD>The sequence of MIDI-Events of a MTrk-chunk. The time is specified<br>
+      independant from other tracks. MIDI-files of format 0 (SMF0) have<br>
+       exact one track, MIDI-files of format 1 (SMF1) use more than one track.<br></TD>
+
+</TABLE>
+</div>
+
+
+<script language=JavaScript>
+	function clickHandler()
+	{
+	  var targetId, srcElement, targetElement;
+	  srcElement = window.event.srcElement;
+	  if (srcElement.className == "Outline")
+	  {
+		 targetId = srcElement.id + "details";
+		 targetElement = document.all(targetId);
+		 if (targetElement.style.display == "none")
+		 {
+			targetElement.style.display = "";
+		 }
+		 else
+		 {
+			targetElement.style.display = "none";
+		 }
+		 targetId = srcElement.id + "keyminus";
+		 targetElement = document.all(targetId);
+		 if (targetElement.style.display == "none")
+		 {
+			targetElement.style.display = "";
+		 }
+		 else
+		 {
+			targetElement.style.display = "none";
+		 }
+		 targetId = srcElement.id + "keyplus";
+		 targetElement = document.all(targetId);
+		 if (targetElement.style.display == "none")
+		 {
+			targetElement.style.display = "";
+		 }
+		 else
+		 {
+			targetElement.style.display = "none";
+		 }
+	  }
+	}
+	document.onclick = clickHandler;
+</script>
+
+</BODY>
+</HTML>

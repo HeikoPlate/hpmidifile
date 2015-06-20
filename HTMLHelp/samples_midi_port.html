@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>MIDI Port: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_change_midi_port.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_tempo.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">MIDI Port: Samples</font></b>
+</p>
+
+<pre>
+
+
+int id, chan, time, type, result;
+int track, port;
+
+// Read MIDI Port
+
+HP_Rewind(mf);
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_MIDI_PORT)
+   {
+      int port;
+      result = HP_ReadMidiPort(mf,id,&time,&track,&port);
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+
+      CString r;
+      r.Format("MidiPort: time %i, track %i, port %i",time,track,port);
+      MessageBox(r,NULL,MB_OK);
+      break;
+   }
+}
+
+/* ============================================================================== */
+
+// Insert MIDI Port
+
+result = HP_InsertMIDIPort(mf,0,1,5); // time 0, track 1, port 5
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+   return;
+}
+
+/* ============================================================================== */
+
+// Change Sequence Number
+
+HP_Rewind(mf);
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_MIDI_PORT)
+   {
+      result = HP_ChangeMidiPort(mf,id,HP_NO_TRACK,2); // change port to 2 only
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+      break;
+   }
+}
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

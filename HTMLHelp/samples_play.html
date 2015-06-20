@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Play: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_is_playing.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="structure_hp_device.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Play: Samples</font></b>
+</p>
+
+<pre>
+
+// HP_GetMIDIDevices, HP_SelectMIDIDevice
+{
+   HP_DEVICE *devices;
+   int k;
+   int no_devices;
+   UINT result;
+
+   result = HP_GetMIDIDevices(&devices,&no_devices);
+   if (result != HP_ERR_NONE)
+   {
+      MessageBox(HP_ErrText(result),NULL,MB_OK);
+      return;
+   }
+   CString r;
+   r.Format("No of MIDI Devices: %i",no_devices);
+   MessageBox(r,NULL,MB_OK);
+
+   for (k=0; k&ltno_devices; k++)
+   {
+      int id = devices[k].device_id;
+      char* name = devices[k].device_name;
+      r.Format("ID: %i, Device-Name: %s",id,name);
+      MessageBox(r,NULL,MB_OK);
+   }
+
+   result = HP_SelectMIDIDevice(devices[0].device_id);
+   if (result != HP_ERR_NONE)
+   {
+      MessageBox(HP_ErrText(result),NULL,MB_OK);
+      return;
+   }
+   HP_Delete(devices);
+}
+
+
+// Play whole song
+{
+   UINT result;
+   result = HP_Play(mf,HP_ALL);
+   if (result != HP_ERR_NONE)
+   {
+      MessageBox(HP_ErrText(result),NULL,MB_OK);
+      return;
+   }
+}
+
+// Change timeposition of actual play
+{
+   UINT result;
+   int new_time = 40127 // tick number
+   result = HP_SetPlayTime(mf,new_time);
+   if (result != HP_ERR_NONE)
+   {
+      MessageBox(HP_ErrText(result),NULL,MB_OK);
+      return;
+   }
+}
+
+// Play Selected with events before
+{
+   UINT result;
+   HP_Rewind(mf);
+   int id, chan, time, type;
+   while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+   {
+      if (time < 0x5dc0) continue; // for a long song
+      HP_Select(mf,id);
+   }
+
+   result = HP_Play(mf,HP_SELECTED,HP_SEND_EFFECT_EVENTS_BEFORE);
+   if (result != HP_ERR_NONE)
+   {
+      MessageBox(HP_ErrText(result),NULL,MB_OK);
+      return;
+   }
+
+   Sleep(2000);
+   if (HP_IsPlaying())
+   {
+      MessageBox("MIDI-device busy");
+   }
+}
+
+// Duration
+{
+   long duration = HP_Duration(mf);
+   CString r;
+   r.Format("Duration %i millisec",duration);
+   MessageBox(r,NULL,MB_OK);
+}
+
+// Change the play-tempo
+{
+   HP_PlayTempo(mf,200); // force the tempo to 200% of the original tempo
+}
+
+// Mute while playing
+{
+   // solo play of channel 5
+   const bool mute_list[16] =
+       {false,false,false,false,false, true,false,false,
+        false,false,false,false,false,false,false,false};
+   HP_PlayMute(mf, mute_list);
+}
+
+// Transpose while playing
+{
+   // channel 9 is the only drum-channel, all other channels are transposed
+   const bool transpose_list[16] =
+       {true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true};
+   HP_PlayTranspose(mf,-2,transpose_list);
+}
+
+// Send a single MIDI Event while playing
+{
+   // example: SysEx Master Volume
+   int length = 9;
+   unsigned char event_data[9] =
+      {0xf0,0x43,0x10,0x4c,0x00,0x00,0x04,0x40,0xf7}; // Master Volume 64
+   HP_PlaySingleEvent(mf,event_data,length);
+}
+
+// Play-Time
+{
+   Sleep(2000);
+   long play_time = HP_PlayTime(mf);
+   CString r;
+   r.Format("Play-Time after 2 sec: %i millisec",play_time);
+   MessageBox(r,NULL,MB_OK);
+}
+
+// Tick-number of the event actually played
+{
+   while (HP_IsPlaying(mf))
+   {
+      CString r;
+      long time = HP_PlayEventTime(mf);
+      if (time == -1)
+      {
+         MessageBox("PlayEventTime: Error", NULL, MB_OK);
+         break;
+      }
+      else
+      {
+         r.Format("PlayEventTime: %i ticks", time);
+         MessageBox(r,NULL,MB_OK);
+      }
+      Sleep(1000);
+   }
+   MessageBox("Play finished", NULL, MB_OK);
+}
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

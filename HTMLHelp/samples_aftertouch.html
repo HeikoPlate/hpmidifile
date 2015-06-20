@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Aftertouch: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_change_aftertouch.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_controller.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Aftertouch: Samples</font></b>
+</p>
+
+<pre>
+
+// Read Aftertouch
+HP_Rewind(mf);
+int id, chan, time, type, note, pressure;
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_AFTERTOUCH)
+   {
+      HP_ReadAftertouch(mf,id,&time,&chan,&amp;note,&pressure);
+      CString r;
+      r.Format("Aftertouch: time %i, chan %i, note %i, pressure %i",time,chan,note,pressure);
+      MessageBox(r,NULL,MB_OK);
+      break;
+   }
+}
+
+/* ============================================================================== */
+
+// Insert Aftertouch
+result = HP_InsertAftertouch(mf,0x1921,0,0x40,0x80);
+if (result != HP_ERR_NONE)
+{
+	MessageBox(HP_ErrText(result),NULL,MB_OK);
+	return;
+}
+
+/* ============================================================================== */
+
+// Change Aftertouch
+result = HP_ChangeAftertouch(mf,id,HP_NO_NOTE,120,HP_PERCENT);
+if (result != HP_ERR_NONE)
+{
+	MessageBox(HP_ErrText(result),NULL,MB_OK);
+	return;
+}
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

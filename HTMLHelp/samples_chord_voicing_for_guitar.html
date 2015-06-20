@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Chord Voicing For Guitar: Samples</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="hp_insert_chord_voicing_for_guitar.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="hp_read_lyrics_bitmap.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Chord Voicing For Guitar: Samples</font></b>
+</p>
+
+<pre>
+
+
+int id, chan, time, type, length, result;
+unsigned char *event_data;
+
+// Read Chord Voicing For Guitar
+
+int type, chan;
+HP_Rewind(mf);
+while (HP_ReadEvent(mf,&id,&chan,&time,&type)==HP_ERR_NONE)
+{
+   if (type==HP_CHORD_VOICING_FOR_GUITAR)
+   {
+      result = HP_ReadChordVoicingForGuitar(mf,id,&time,&event_data,&length);
+      if (result != HP_ERR_NONE)
+      {
+         MessageBox(HP_ErrText(result),NULL,MB_OK);
+         return;
+      }
+
+      CString r;
+      int i;
+
+      r.Format("%s: time %x ",HP_TypeName(type),time);
+      MessageBox(r,NULL,MB_OK);
+
+      for (i=0; i&ltlength; i++)
+      {
+          r.Format("event_data[%i]: %x",i,event_data[i]);
+          MessageBox(r,NULL,MB_OK);
+      }
+      HP_Delete(event_data);
+   }
+}
+
+/* ============================================================================== */
+
+// Insert ChordVoicingForGuitar
+
+unsigned char data[] = {0xff,0x7f,0x??,0x43,0x7b,0c12,...}; // some bytes more
+
+result = HP_InsertChordVoicingForGuitar(mf, 0x2048 ,data,??);
+
+if (result != HP_ERR_NONE)
+{
+   MessageBox(HP_ErrText(result),NULL,MB_OK);
+}
+
+</pre>
+
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

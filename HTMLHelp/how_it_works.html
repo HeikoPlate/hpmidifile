@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>How it works</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="the_basics.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="visual_basic_interface.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">How it works</font></b>
+</p>
+<br>
+<br>
+<font face="Verdana" size="4">
+<div align="center"> Overview
+</font>
+</div>
+
+<p><font face="Verdana" size="2">
+
+
+HP MIDIFILE consists of a lot of functions to manipulate existing MIDI-files or to create new ones. The functions
+operate on global attributes of the MIDI-file and on MIDI-events.
+<br>
+<br>
+The data of a MIDI-file is internal organisized by an dynamic eventlist of MIDI-events which is sorted by time-stamps.
+The function HP_ReadEvent reads the MIDI-events sequentially from the eventlist and delivers the time-stamp and a tag,
+describing the type of the event.
+<br>
+<br>
+We distinguish standard MIDI-events, SysEx-events, standard Meta-events and YAMAHA
+meta-events, used with the formats XG and XF. For most events read-, insert- and change-functions are implemented.
+<br>
+<br>
+Other functions allow to shift events, to transpose and quantisize notes, to select, copy and paste and to play the file.
+<br>
+<br>
+The first action to be done is to initialize a MIDI-file session with the call HP_Init. The function returns a handle,
+which now is the first parameter for all function-calls of this session. We can set up more than one session at the
+same time and we can copy events from one session to another.
+<br>
+<br>
+The next call will concern mostly the function HP_Load in order to load an existing MIDI-file of type SMF0 or SMF1.
+But it is also possible to edit a new MIDI-file by entering all events needed without loading a MIDI-file before.
+The creation of the target MIDI-file happens with the call of HP_Save. Here the formats SMF0 and SMF1 are allowed.
+The session ends with a call of HP_Free, which destroys all data from memory.
+<br>
+<br>
+Additional a set of functions is included to get texts from Instrument Definition Files of Cakewalk/Sonar.
+<br>
+<br>
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+

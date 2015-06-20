@@ -1,0 +1,16 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=hpmidifile.chm
+Contents file=hpmidifile.hhc
+Default topic=introduction.html
+Display compile progress=No
+Error log file=hpmidifile.log
+Full-text search=Yes
+Index file=hpmidifile.hhk
+Language=0x809 Englisch (Groﬂbritannien)
+Title=HP MIDIFILE
+
+
+[INFOTYPES]
+

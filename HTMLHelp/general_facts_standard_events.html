@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Standard MIDI-events: General Facts</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="samples_other_functions.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="general_facts_notes.html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">Standard MIDI-events: General Facts</font></b>
+</p>
+<br>
+<br>
+
+<p><font face="Verdana" size="2">
+
+This topic is concerned with functions working upon the MIDI-events Note, Aftertouch,
+Controller, RPN, NRPN, Program Change, Channel Pressure and Pitch Wheel.
+<BR>
+<BR>
+All these events are associated with MIDI-channels.
+<BR>
+<BR>
+The three events Note, RPN and NRPN listed above are compound MIDI-events. Each of these are realized
+by two or more basic MIDI-events, which have to follow one after another in a defined order.
+<BR>
+<BR>
+<BR>
+<B>Note</B>
+<BR>
+Note-events consist of the basic events "Note On", later followed by "Note Off". The distance
+of time between both events is the length of the note.
+<BR>
+<BR>
+<B>RPN and NRPN</B>
+<BR>
+These events often are called "Extended Controller-events", because these are contructed by
+three or four Controller-events which follow directly one after another.
+<BR>
+The first two basic events "RPN-MSB" and "RPN-LSB" or "NRPN-MSB" and "NRPN-LSB" define the type of RPN / NRPN.
+After this we have the specification of event-data by the two events "Data-MSB" and "Data-LSB" or one of
+the events "Data-Increment", "Data-Decrement".
+<BR>
+<BR>
+<BR>
+Programming Notes, RPN or NRPN with HP MIDIFILE, we are not confrontated with the basic events. The
+functions only work with compound events; the basic events of these are hidden to the programmer.
+It is not possible to read, insert, change and delete these. This is allowed only implicite with
+the compound event itself. HP MIDIFILE takes care that each compound event gets its correct basic
+events needed. The only contact with basic events happens with the function HP_ReadEvent which walks
+sequentially through the internal eventlist.
+<BR>
+<BR>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+
