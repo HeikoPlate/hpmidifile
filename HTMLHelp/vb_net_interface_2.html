@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Visual Basic .Net Interface 2</TITLE>
+<STYLE>
+#flush {margin-left: -10p; margin-right: -0p}
+#buttonbar {color: white}
+</STYLE>
+</HEAD>
+
+<BODY TOPMARGIN=0 BGPROPERTIES="FIXED" BGCOLOR="white">
+<FONT FACE="ARIAL">
+<SPAN ID="flush">
+<A NAME="SEE ALSO">
+
+<TABLE WIDTH="100%" COLS=2 BORDER=0 BGCOLOR="#000000">
+<TR ALIGN=RIGHT>
+<TD ALIGN=LEFT>
+<IMG SRC="images/hpmidifile.gif" WIDTH="110" HEIGHT="33"  BORDER=0>
+</TD>
+<TD ALIGN=RIGHT VALIGN=TOP>
+<FONT FACE="ARIAL" SIZE="2">
+<A ID=buttonbar HREF="vb_net_interface 2.html">
+<IMG SRC="images/u_prev.gif" WIDTH="71" HEIGHT="16"  BORDER=0 ALT="Previous Topic">
+<A ID=buttonbar HREF="functions.html">
+<IMG SRC="images/u_index.gif" WIDTH="47" HEIGHT="16"  BORDER=0 ALT="Index">
+<A ID=buttonbar HREF="vb_net_interface (Frenes).html">
+<IMG SRC="images/u_next.gif" WIDTH="48" HEIGHT="16"  BORDER=0 ALT="Next Topic">
+</A>
+</FONT></TD><TD WIDTH=15></TD>
+</TR>
+</TABLE>
+
+</A>
+</SPAN>
+
+<p align="left">
+  <b><font face="Verdana" size="4" color="#0000FF">VB.Net Interface 2</font></b>
+</p>
+<br>
+<br>
+<font face="Verdana" size="4">
+<div align="center">
+How to use the library HP MIDIFILE with Visual Basic .Net .
+<br>
+from Johann Frenes.
+</font>
+</div>
+
+<p>
+The method is explained with a sample program that converts a midi type 1 file (c:\temp\playtest.mid) to a midi type 0 file (c:\temp\playtestnew.mid).
+</p>
+<p>
+The Visual Basic program consists of one form that has one command button called Convert MIDI Type. The file HP_midifile.dll should be located in the same folder as the basic program.
+</p>
+<p>
+The method used here is to declare the names of dll functions that will be needed in the basic program using the internal identifications of the library. These "decorated names" are listed in the map-file HP_midifile.map. Use the string starting with the letter "?" in HP_Midifile.map for the "EntryPoint" in Visual Basic declare statement.
+</p>
+<p>
+Care must be taken with the data type used. E.g. If the C++ dll is expecting:
+</p>
+<p>
+UINT, Visual Basic should use ByVal Uint32<br>
+int, use Int32<br>
+reference *handle, use IntPtr<br>
+reference *string, use StringBuilder<br>
+reference *char, use StringBuilder<br>
+</p>
+<p>
+For more information on data type conversion between C++ and VB, refer to proper conversion tables in the web. For example<br>
+
+<p>
+<a href="https://msdn.microsoft.com/de-de/library/47zceaw7.aspx">https://msdn.microsoft.com/de-de/library/47zceaw7.aspx</a>
+</p>
+<p>
+http://www.marvintest.com/KnowledgeBase/KBArticle.aspx?ID=210
+</p>
+For further information on declaring functions of HP_Midifile.dll, refer to P-Invoke on MSDN or <a href="http://www.pinvoke.net/">http://www.pinvoke.net/</a>
+<p>
+The functions often refer to arguments such as HP_SMF0. The values expected by the
+dll are defined in the headerfile HP_midifile.h. For example the line
+</p>
+<pre>
+#define HP_SMF0		0	/* Standard MIDI file-format 0 */
+</pre>
+<p>
+means passing a "0" signifies a type 0 midi file.
+</p>
+<br>
+<br>
+<p> <b>The basic code in Form1</b>
+</p>
+<p> The VB project is compiled with VB.Net 2010 (and later) using "Platform target: Any CPU"
+</p>
+<pre>
+========================================================
+
+Imports System.Text
+Imports System.Runtime.InteropServices
+
+Public Class Form1
+    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Init@@YAPAVMIDIFile@@XZ",
+               CharSet:=CharSet.Unicode, ExactSpelling:=True,
+               CallingConvention:=CallingConvention.Cdecl)>
+    Public Shared Function HP_init() As IntPtr
+    End Function
+    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Load@@YAIPAVMIDIFile@@PBD@Z",
+               CharSet:=CharSet.Ansi, ExactSpelling:=True,
+               CallingConvention:=CallingConvention.Cdecl)>
+    Public Shared Function HP_Load( ByVal mf As IntPtr,
+                                    ByVal Name As StringBuilder) As UInt32
+    End Function
+    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Free@@YAIPAVMIDIFile@@@Z",
+               CharSet:=CharSet.Unicode, ExactSpelling:=True,
+               CallingConvention:=CallingConvention.Cdecl)>
+    Public Shared Function HP_Free(ByVal mf As IntPtr) As UInt32
+    End Function
+    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Save@@YAIPAVMIDIFile@@PBDH@Z",
+               CharSet:=CharSet.Ansi, ExactSpelling:=True,
+               CallingConvention:=CallingConvention.Cdecl)>
+    Public Shared Function HP_Save(ByVal mf As IntPtr,
+                                   ByVal Name As StringBuilder,
+                                   ByVal SMFType As Int32) As UInt32
+    End Function
+    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Play@@YAIPAVMIDIFile@@H_N@Z",
+               CharSet:=CharSet.Unicode, ExactSpelling:=True,
+               CallingConvention:=CallingConvention.Cdecl)>
+    Public Shared Function HP_Play(ByVal mf As IntPtr,
+                                   ByVal Selection As Int32,
+                                   ByVal EventBefore As Boolean) As UInt32
+    End Function
+
+    'Const
+    Const HP_ALL = 1
+
+    'MIDI File Formats
+    Const HP_SMF0 = 0 ' Standard MIDI file-format 0
+    Const HP_SMF1 = 1 ' Standard MIDI file-format 1
+    Const HP_Error_None = 0
+
+    'Variables
+    Private FileName As New StringBuilder
+    Private NewFileName As New StringBuilder
+    Private HmF As IntPtr  'Handle for Midi
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FileName.Clear()
+        FileName.Append("c:\temp\playtest.mid")
+        NewFileName.Clear()
+        NewFileName.Append("c:\temp\playtestNew.mid")
+    End Sub
+
+    Private Sub btnConvertMidiType_Click(sender As Object, e As EventArgs)
+                Handles btnConvertMidiType.Click
+
+         Dim RC As UInt32
+
+        'Initialize Handle for Midi session
+        HmF = HP_init()
+        If HmF = 0 Then
+            'do some error handling here
+            MsgBox("Error initializing Midi")
+        End If
+
+        'Load Midi file
+        RC = HP_Load(HmF, FileName)
+        If RC &lt;&gt; HP_Error_None Then
+            'Do some error handling here
+            MsgBox("Error opening Midi file")
+        End If
+
+        'Play Midi file
+        RC = HP_Play(HmF, 0, False)
+        If RC &lt;&gt; HP_Error_None Then
+            'Do some error handling here
+            MsgBox("Error playing Midi file")
+        End If
+
+       'Save file as type 0
+        RC = HP_Save(HmF, NewFileName, HP_SMF0)
+        If RC &lt;&gt; HP_Error_None Then
+            'Do some error handling here
+            MsgBox("Error saving Midi file")
+        End If
+
+        'Free handle
+        RC = HP_Free(HmF)
+        If RC &lt;&gt; HP_Error_None Then
+            'do some error handling here
+            MsgBox("Error in free Midi")
+        End If
+
+    End Sub
+
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs)
+                        Handles MyBase.FormClosing
+                        FileName = Nothing
+                        NewFileName = Nothing
+    End Sub
+
+End Class
+
+========================================================
+</pre>
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+

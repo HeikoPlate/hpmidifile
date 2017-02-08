@@ -34,9 +34,13 @@
                                 <param name="Local" value="visual_basic_interface.html">
                                 </OBJECT>
                         <LI> <OBJECT type="text/sitemap">
-                                <param name="Name" value="VB.Net Interface">
-                                <param name="Local" value="vb_net_interface.html">
+                                <param name="Name" value="VB.Net Interface 1">
+                                <param name="Local" value="vb_net_interface_1.html">
                                 </OBJECT>
+                        <LI> <OBJECT type="text/sitemap">
+		                <param name="Name" value="VB.Net Interface 2">
+		                <param name="Local" value="vb_net_interface_2.html">
+		                </OBJECT>
                         <LI> <OBJECT type="text/sitemap">
                                 <param name="Name" value="C# Interface">
                                 <param name="Local" value="c_sharp_interface.html">
