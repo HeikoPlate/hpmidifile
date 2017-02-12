@@ -99,32 +99,32 @@ Imports System.Text
 Imports System.Runtime.InteropServices
 
 Public Class Form1
-    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Init@@YAPAVMIDIFile@@XZ",
+    &lt;DllImport("HP_midifile.dll", EntryPoint:="?HP_Init@@YAPAVMIDIFile@@XZ",
                CharSet:=CharSet.Unicode, ExactSpelling:=True,
-               CallingConvention:=CallingConvention.Cdecl)>
+               CallingConvention:=CallingConvention.Cdecl)&gt;
     Public Shared Function HP_init() As IntPtr
     End Function
-    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Load@@YAIPAVMIDIFile@@PBD@Z",
+    &lt;DllImport("HP_midifile.dll", EntryPoint:="?HP_Load@@YAIPAVMIDIFile@@PBD@Z",
                CharSet:=CharSet.Ansi, ExactSpelling:=True,
-               CallingConvention:=CallingConvention.Cdecl)>
+               CallingConvention:=CallingConvention.Cdecl)&gt;
     Public Shared Function HP_Load( ByVal mf As IntPtr,
                                     ByVal Name As StringBuilder) As UInt32
     End Function
-    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Free@@YAIPAVMIDIFile@@@Z",
+    &lt;DllImport("HP_midifile.dll", EntryPoint:="?HP_Free@@YAIPAVMIDIFile@@@Z",
                CharSet:=CharSet.Unicode, ExactSpelling:=True,
-               CallingConvention:=CallingConvention.Cdecl)>
+               CallingConvention:=CallingConvention.Cdecl)&gt;
     Public Shared Function HP_Free(ByVal mf As IntPtr) As UInt32
     End Function
-    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Save@@YAIPAVMIDIFile@@PBDH@Z",
+    &lt;DllImport("HP_midifile.dll", EntryPoint:="?HP_Save@@YAIPAVMIDIFile@@PBDH@Z",
                CharSet:=CharSet.Ansi, ExactSpelling:=True,
-               CallingConvention:=CallingConvention.Cdecl)>
+               CallingConvention:=CallingConvention.Cdecl)&gt;
     Public Shared Function HP_Save(ByVal mf As IntPtr,
                                    ByVal Name As StringBuilder,
                                    ByVal SMFType As Int32) As UInt32
     End Function
-    <DllImport("HP_midifile.dll", EntryPoint:="?HP_Play@@YAIPAVMIDIFile@@H_N@Z",
+    &lt;DllImport("HP_midifile.dll", EntryPoint:="?HP_Play@@YAIPAVMIDIFile@@H_N@Z",
                CharSet:=CharSet.Unicode, ExactSpelling:=True,
-               CallingConvention:=CallingConvention.Cdecl)>
+               CallingConvention:=CallingConvention.Cdecl)&gt;
     Public Shared Function HP_Play(ByVal mf As IntPtr,
                                    ByVal Selection As Int32,
                                    ByVal EventBefore As Boolean) As UInt32
